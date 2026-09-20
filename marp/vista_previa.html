@@ -20,7 +20,7 @@ button { color:#eee; border:1px solid #666; background:#303134; border-radius:4p
  * @theme vg-lab
  * @size 4:3 960px 720px
  *
- * Five reusable layouts: cover, text, split, sidebar, figure.
+ * Reusable layouts: cover, text, split, sidebar, figure, results.
  * Local coordinates are allowed only on exceptional objects in Markdown.
  * Keep this file beside presentacion.md so relative asset URLs remain valid.
  */
@@ -223,6 +223,29 @@ section > p:has(> img, > video) > :is(img, video), section > video {
 }
 section.split > p:has(> img) > img { object-fit: fill; }
 
+/* Results: text above a chart that fits the remaining body area. */
+section.results {
+  display: flex;
+  flex-direction: column;
+  padding: 184px 48px 24px;
+  --body-size: 20px;
+  --paragraph-gap: 8px;
+}
+section.results > :is(p, ul, ol) {
+  flex-shrink: 0;
+  margin-top: 0;
+}
+section.results > :is(ul, ol) { padding-left: 24px; }
+section.results li { margin: 4px 0; }
+section.results > p:has(> img) {
+  position: relative;
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  margin: 12px 0 0;
+}
+section.results > p:has(> img) > img { object-fit: contain; }
+
 /* Image and area highlights share one coordinate system. */
 section.figure > .diagram {
   position: absolute;
@@ -408,7 +431,7 @@ marcos.garcía@urjc.es</p>
 <section class="sidebar" data-slide="7" aria-label="Slide 7"><h1>Computer Graphics and Medical Simulation</h1>
 <p><em><strong>Projectional Radiography Simulator</strong></em>: An interactive learning environment for diagnostic radiography that helps educators connect theory and practice</p>
 <p><a href="https://vg-lab.es/xraysim/">https://vg-lab.es/xraysim/</a></p>
-<p><video controls preload="none" playsinline poster="assets/images/image18.png" src="assets/videos/slide-07-1158545669.mp4" aria-label="videoplayback"></video></p>
+<p><video controls preload="none" playsinline poster="assets/images/image18.png" src="assets/videos/1.mp4" aria-label="videoplayback"></video></p>
 <p><img src="assets/images/image16.png" alt="Picture 4" /></p>
 <p><img src="assets/images/image17.png" alt="Picture 6" /></p>
 <p><img src="assets/images/image15.png" alt="Picture 2" /></p>
@@ -466,7 +489,7 @@ T7.3.9 – Low-level visualisation backend</p>
 </section>
 <section class="sidebar" data-slide="12" aria-label="Slide 12"><h1>MeLVin</h1>
 <p>A graphical meta-framework for prototyping data visualization and exploratory analysis</p>
-<p><video controls preload="none" playsinline poster="assets/images/image26.png" src="assets/videos/slide-11-2066184930.mp4" aria-label="SnapSave.io-MeLVin(360p)"></video></p>
+<p><video controls preload="none" playsinline poster="assets/images/image26.png" src="assets/videos/2.mp4" aria-label="SnapSave.io-MeLVin(360p)"></video></p>
 <p><img src="assets/images/image23.png" alt="Picture 2" /></p>
 <p><img src="assets/images/image24.png" alt="Picture 6" /></p>
 <p><img src="assets/images/image25.png" alt="Picture 4" /></p>
@@ -496,9 +519,9 @@ T7.3.9 – Low-level visualisation backend</p>
 <p><strong>Automatic dendritic spine segmentation using deep learning</strong> +<br />
 user-supervised correction algorithms</p>
 <p><a href="https://vg-lab.es/deepspinenet/">https://vg-lab.es/deepspinenet/</a></p>
-<p><video controls preload="none" playsinline poster="assets/images/image28.png" src="assets/videos/slide-13-1419470627.mp4" aria-label="DSNet2"></video></p>
+<p><video controls preload="none" playsinline poster="assets/images/image28.png" src="assets/videos/3.mp4" aria-label="DSNet2"></video></p>
 <p><img src="assets/images/image30.png" alt="Picture 2" /></p>
-<p><video controls preload="none" playsinline poster="assets/images/image29.png" src="assets/videos/slide-13-955489805.mp4" aria-label="DSNet3"></video></p>
+<p><video controls preload="none" playsinline poster="assets/images/image29.png" src="assets/videos/4.mp4" aria-label="DSNet3"></video></p>
 <p><img src="assets/images/image27.png" alt="Picture 4" /></p>
 </section>
 <section class="text" data-slide="15" aria-label="Slide 15"><h1>DeepSpineNet</h1>
@@ -555,12 +578,125 @@ For instance, scientists are generally not interested in segmenting the entire i
 </section>
 <section class="figure" data-slide="22" aria-label="Slide 22"><h1>EspINA</h1>
 <div class="media" style="--x: 224.69px; --y: 187.30px; --w: 509.15px; --h: 509.15px; --z: 3">
-<p><video controls preload="none" playsinline poster="assets/images/image38.png" src="assets/videos/slide-21-516877989.mp4" aria-label="cl04_32_33_espina_manipulate_facet"></video></p>
+<p><video controls preload="none" playsinline poster="assets/images/image38.png" src="assets/videos/5.mp4"></video></p>
 </div>
 </section>
-<section class="text" data-slide="23" aria-label="Slide 23"><h1>New lines - Undertaning</h1>
+<section class="text" data-slide="23" aria-label="Slide 23"><h1>Analyzing LPFs</h1>
+<ul>
+<li>In collaboration with the Experimental and Computational Electrophysiology Group (https://cajal.csic.es/en/experimental-and-computational-electrophysiology/), which belongs to the Cajal Neuroscience Center at the Spanish National Research Council (CSIC).</li>
+</ul>
+<br>
+<ul>
+<li>They are interested in brain activity using intracranial EEG recordings.</li>
+<li>The signals captured by electrodes are known as local field potentials (LFPs).</li>
+<li>These signals are composed of the sum of neuronal activity from different regions.</li>
+<li>This group has been working for years on the development of blind source separation techniques to isolate activity from different brain regions.</li>
+<li>Several methods exist, but they work with a customized version of Independent Component Analysis (ICA).</li>
+<li>This technique is not free from limitations.</li>
+</ul>
 </section>
-<section class="text" style="background-image: url(&quot;assets/images/image6.png&quot;)" data-slide="24" aria-label="Slide 24"><h1>My Work</h1>
+<section class="figure" data-slide="24" aria-label="Slide 24"><h1>The Cocktail Party Problem</h1>
+<div class="media" style="--x: 224.69px; --y: 187.30px; --w: 509.15px; --h: 509.15px; --z: 3">
+<p><video controls preload="none" playsinline src="assets/videos/v1.mp4"></video></p>
+</div>
+</section>
+<section class="figure" data-slide="25" aria-label="Slide 25"><h1>The Cocktail Party Problem</h1>
+<div class="media" style="--x: 224.69px; --y: 187.30px; --w: 509.15px; --h: 509.15px; --z: 3">
+<p><video controls preload="none" playsinline src="assets/videos/v2.mp4"></video></p>
+</div>
+</section>
+<section class="text" data-slide="26" aria-label="Slide 26"><h1>ICA Limitations</h1>
+<ul>
+<li>
+<p>It depends on the number N of sources selected. Several approaches exist to estimate the number of sources.
+<br></p>
+</li>
+<li>
+<p>Basic techniques cannot recover the original signal amplitudes.
+<br></p>
+</li>
+<li>
+<p>Signals cannot be correlated.</p>
+<ul>
+<li>We must remove synchronous activity from our analysis.</li>
+<li>We can only work with baseline activity.</li>
+</ul>
+</li>
+</ul>
+<p><br><br><br><br><br><br><br><br></p>
+</section>
+<section class="figure" data-slide="27" aria-label="Slide 27"><h1>The Cocktail Party Problem</h1>
+<div class="media" style="--x: 224.69px; --y: 187.30px; --w: 509.15px; --h: 509.15px; --z: 3">
+<p><video controls preload="none" playsinline src="assets/videos/v3.mp4"></video></p>
+</div>
+</section>
+<section class="" data-slide="28" aria-label="Slide 28"><h1>Motivation</h1>
+<ul>
+<li>Although most of our recordings contain baseline activity.</li>
+<li>This activity is highly complex and apparently random.
+<br></li>
+</ul>
+<p><strong>Our objective</strong>:</p>
+<ul>
+<li>To determine whether we are able to identify patterns in baseline activity that allow us to distinguish brain regions;</li>
+<li>And whether these patterns are consistent across subjects.</li>
+</ul>
+<blockquote>
+<p>Methods based on handcrafted features usually offer better interpretability, but they are less powerful than DL models.</p>
+</blockquote>
+<ul>
+<li>Our secondary objective is to assess whether DL methods identify patterns beyond the handcrafted features we have extracted.</li>
+</ul>
+<p><br><br><br><br></p>
+</section>
+<section class="" data-slide="29" aria-label="Slide 29"><h1>Methodology</h1>
+<ul>
+<li>
+<p>We have worked on training ML models based on handcrafted features and DL models operating on raw signals to determine whether there are patterns in baseline activity that allow us to identify brain regions.</p>
+</li>
+<li>
+<p>We compare models with different levels of complexity to determine whether the relationships among handcrafted features that support generator identification can be captured by linear models or require more flexible nonlinear functions.</p>
+</li>
+</ul>
+<p><br><br><br><br><br><br>&lt;</p>
+</section>
+<section class="results" data-slide="30" aria-label="Slide 30"><h1>Results</h1>
+<ul>
+<li>
+<p>Both feature-based and deep learning models identify brain regions from baseline activity in the test set.</p>
+</li>
+<li>
+<p>Deep learning models perform significantly better than feature-based models.</p>
+</li>
+</ul>
+<p><img src="assets/images/r1.png" alt="Picture 2" /></p>
+</section>
+<section class="results" data-slide="31" aria-label="Slide 31"><h1>Results</h1>
+<p>Does deep learning capture patterns beyond our handcrafted features?</p>
+<ul>
+<li>We first examined the transformer's predictions and output probabilities.</li>
+<li>We then focused on cases misclassified by the feature-based models.</li>
+<li>In these cases, the deep learning model made predictions with high confidence.</li>
+</ul>
+<p><img src="assets/images/r2.png" alt="Picture 2" /></p>
+</section>
+<section class="" data-slide="32" aria-label="Slide 32"><h1>Future lines of work</h1>
+<ul>
+<li>In recent years, significant effort has been devoted to the study of DL interpretability:
+<ul>
+<li>Explainable AI (XAI)</li>
+<li>Mechanistic interpretability</li>
+</ul>
+<blockquote>
+<p>This is certainly easier with images and text, but it is worth trying.</p>
+</blockquote>
+</li>
+<li>Once we have shown that baseline activity contains patterns that allow us to identify brain regions, we want to determine whether we can distinguish healthy regions from regions with pathological activity.
+<blockquote>
+<p>In the context of epilepsy, seizures are sometimes provoked to identify regions. Being able to detect a region with pathological activity using baseline activity would be a major advance.</p>
+</blockquote>
+</li>
+</ul>
 </section></main></div>
 <nav id="toolbar" aria-label="Presentation controls">
 <button id="previous" type="button" title="Left arrow">Previous</button>
@@ -573,7 +709,7 @@ For instance, scientists are generally not interested in segmenting the entire i
 <script>
 'use strict';
 const slides = Array.from(document.querySelectorAll('#stage section'));
-const notes = ["", "", "", "", "", "Technical degree programs in Systems and Management Informatics have been offered since the 1997–1998 academic year.\nThe School of Computer Engineering was established in July 2007.", "X-ray simulator:\nThis is a safe environment for training radiographers, with no risk of radiation exposure.\nIt simulates the full procedure, including patient positioning and machine settings.\nDifferent patient models can be added easily.\nThis work is a collaboration with hospitals in the UK and Bangor University.", "Enhancing simulated X-ray images:\nMonte Carlo methods accurately simulate how photons interact with different materials in the scene.\nHowever, producing high-quality images takes a lot of computing time.\nThe top-left image was simulated using one billion photons. It took about 70 hours on a server running 20 threads in parallel.\nThe center image was simulated in less than one second on a desktop PC.\nHowever, this deterministic simulation only accounts for the energy absorbed by tissues. It does not include scattering.\nWe aim to use deep learning to add scattering effects to the final image.", "The Human Brain Project, or HBP, was a European research project.\nThese were the tasks that VG-LAB contributed to during its different phases.", "EBRAINS is a European project.\nHere are our contributions to EBRAINS 2.0 and the Virtual Brain Twin project.", "", "MeLVin: https://vg-lab.es/melvin/\nMeLVin is a web-based meta-framework for building visualization applications.\nIt is especially useful for rapid prototyping and interactive exploratory analysis.\nIt connects visualizations and data analysis tools built with different technologies, so they can work together.\nIt can be extended and adapted to different research areas.\nUsers can define the data analysis process with simple flowcharts.\nMost flowchart-based data mining tools use visualizations only to show the final results.\nMeLVin also lets users include visualizations and interactions between them as part of the analysis process.", "The Human Brain Project, or HBP, was a European research project.\nThese were the tasks that VG-LAB contributed to during its different phases.", "Challenges:\nScientific datasets are often small, and their labels are incomplete or imprecise.\nWe propose three approaches:\n- Automatic algorithms to improve the quality of the training data.\n- Training techniques to reduce overfitting caused by poor-quality data.\n- Correction algorithms to further improve the ground-truth labels.", "As most of you already know, deep learning models work well for many segmentation and classification tasks.\nHowever, applying them to biomedical images can be difficult.\n\nFirst, we work with 3D image stacks.\nMany state-of-the-art models mainly work with 2D images.\nProcessing 3D images requires more complex models, often with many parameters.\n\nThese models need large training datasets.\nLabeling dendritic spines is difficult and takes a lot of time.\nThis makes it hard to obtain enough labeled data to train reliable models.\n\nFinally, the labels in many datasets are incomplete.\nResearchers are often interested in only one dendritic branch in the image stack.\nAs a result, other parts of the image remain unlabeled.", "", "Our approach has three components:\n- A preprocessing module to prepare the data.\n- A deep learning model designed for this task.\n- A postprocessing module that lets users correct the model's errors.", "Our approach has three components:\n- A preprocessing module to prepare the data.\n- A deep learning model designed for this task.\n- A postprocessing module that lets users correct the model's errors.", "Our approach has three components:\n- A preprocessing module to prepare the data.\n- A deep learning model designed for this task.\n- A postprocessing module that lets users correct the model's errors.", "Our approach has three components:\n- A preprocessing module to prepare the data.\n- A deep learning model designed for this task.\n- A postprocessing module that lets users correct the model's errors.", "The main goal of the preprocessing module is to create the training set and automatically reconstruct the necks of disconnected dendritic spines.", "", "", ""];
+const notes = ["", "", "", "", "", "Technical degree programs in Systems and Management Informatics have been offered since the 1997–1998 academic year.\nThe School of Computer Engineering was established in July 2007.", "X-ray simulator:\nThis is a safe environment for training radiographers, with no risk of radiation exposure.\nIt simulates the full procedure, including patient positioning and machine settings.\nDifferent patient models can be added easily.\nThis work is a collaboration with hospitals in the UK and Bangor University.", "Enhancing simulated X-ray images:\nMonte Carlo methods accurately simulate how photons interact with different materials in the scene.\nHowever, producing high-quality images takes a lot of computing time.\nThe top-left image was simulated using one billion photons. It took about 70 hours on a server running 20 threads in parallel.\nThe center image was simulated in less than one second on a desktop PC.\nHowever, this deterministic simulation only accounts for the energy absorbed by tissues. It does not include scattering.\nWe aim to use deep learning to add scattering effects to the final image.", "The Human Brain Project, or HBP, was a European research project.\nThese were the tasks that VG-LAB contributed to during its different phases.", "EBRAINS is a European project.\nHere are our contributions to EBRAINS 2.0 and the Virtual Brain Twin project.", "", "MeLVin: https://vg-lab.es/melvin/\nMeLVin is a web-based meta-framework for building visualization applications.\nIt is especially useful for rapid prototyping and interactive exploratory analysis.\nIt connects visualizations and data analysis tools built with different technologies, so they can work together.\nIt can be extended and adapted to different research areas.\nUsers can define the data analysis process with simple flowcharts.\nMost flowchart-based data mining tools use visualizations only to show the final results.\nMeLVin also lets users include visualizations and interactions between them as part of the analysis process.", "The Human Brain Project, or HBP, was a European research project.\nThese were the tasks that VG-LAB contributed to during its different phases.", "Challenges:\nScientific datasets are often small, and their labels are incomplete or imprecise.\nWe propose three approaches:\n- Automatic algorithms to improve the quality of the training data.\n- Training techniques to reduce overfitting caused by poor-quality data.\n- Correction algorithms to further improve the ground-truth labels.", "As most of you already know, deep learning models work well for many segmentation and classification tasks.\nHowever, applying them to biomedical images can be difficult.\n\nFirst, we work with 3D image stacks.\nMany state-of-the-art models mainly work with 2D images.\nProcessing 3D images requires more complex models, often with many parameters.\n\nThese models need large training datasets.\nLabeling dendritic spines is difficult and takes a lot of time.\nThis makes it hard to obtain enough labeled data to train reliable models.\n\nFinally, the labels in many datasets are incomplete.\nResearchers are often interested in only one dendritic branch in the image stack.\nAs a result, other parts of the image remain unlabeled.", "", "Our approach has three components:\n- A preprocessing module to prepare the data.\n- A deep learning model designed for this task.\n- A postprocessing module that lets users correct the model's errors.", "Our approach has three components:\n- A preprocessing module to prepare the data.\n- A deep learning model designed for this task.\n- A postprocessing module that lets users correct the model's errors.", "Our approach has three components:\n- A preprocessing module to prepare the data.\n- A deep learning model designed for this task.\n- A postprocessing module that lets users correct the model's errors.", "Our approach has three components:\n- A preprocessing module to prepare the data.\n- A deep learning model designed for this task.\n- A postprocessing module that lets users correct the model's errors.", "The main goal of the preprocessing module is to create the training set and automatically reconstruct the necks of disconnected dendritic spines.", "", "* Esta es mi linea de trabajo mas reciente\n* He estado trabajando en ella el ultimo año.", "", "", "", "", "", "", "", "", ""];
 let currentSlide = Math.max(0, Math.min(slides.length - 1, (Number(location.hash.slice(1)) || 1) - 1));
 function fitStage() {
   const scale = Math.min(window.innerWidth / 960, (window.innerHeight - 48) / 720);

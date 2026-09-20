@@ -9,7 +9,7 @@ author: 'Marcos García Lorenzo'
 
 <!-- _class: cover -->
 
-# Inside VG-LAB: <br>*Selected Research Areas*
+# Inside VG-LAB: <br>*Selected Work Lines*
 
 *Marcos García Lorenzo*
 marcos.garcía@urjc.es
@@ -161,7 +161,7 @@ The School of Computer Engineering was established in July 2007.
 
 [https://vg-lab.es/xraysim/](https://vg-lab.es/xraysim/)
 
-<video controls preload="none" playsinline poster="assets/images/image18.png" src="assets/videos/slide-07-1158545669.mp4" aria-label="videoplayback"></video>
+<video controls preload="none" playsinline poster="assets/images/image18.png" src="assets/videos/1.mp4" aria-label="videoplayback"></video>
 
 ![Picture 4](assets/images/image16.png)
 
@@ -282,7 +282,7 @@ Here are our contributions to EBRAINS 2.0 and the Virtual Brain Twin project.
 
 A graphical meta-framework for prototyping data visualization and exploratory analysis
 
-<video controls preload="none" playsinline poster="assets/images/image26.png" src="assets/videos/slide-11-2066184930.mp4" aria-label="SnapSave.io-MeLVin(360p)"></video>
+<video controls preload="none" playsinline poster="assets/images/image26.png" src="assets/videos/2.mp4" aria-label="SnapSave.io-MeLVin(360p)"></video>
 
 ![Picture 2](assets/images/image23.png)
 
@@ -339,11 +339,11 @@ user-supervised correction algorithms
 
 
 
-<video controls preload="none" playsinline poster="assets/images/image28.png" src="assets/videos/slide-13-1419470627.mp4" aria-label="DSNet2"></video>
+<video controls preload="none" playsinline poster="assets/images/image28.png" src="assets/videos/3.mp4" aria-label="DSNet2"></video>
 
 ![Picture 2](assets/images/image30.png)
 
-<video controls preload="none" playsinline poster="assets/images/image29.png" src="assets/videos/slide-13-955489805.mp4" aria-label="DSNet3"></video>
+<video controls preload="none" playsinline poster="assets/images/image29.png" src="assets/videos/4.mp4" aria-label="DSNet3"></video>
 
 ![Picture 4](assets/images/image27.png)
 
@@ -525,7 +525,7 @@ The main goal of the preprocessing module is to create the training set and auto
 
 <div class="media" style="--x: 224.69px; --y: 187.30px; --w: 509.15px; --h: 509.15px; --z: 3">
 
-<video controls preload="none" playsinline poster="assets/images/image38.png" src="assets/videos/slide-21-516877989.mp4" aria-label="cl04_32_33_espina_manipulate_facet"></video>
+<video controls preload="none" playsinline poster="assets/images/image38.png" src="assets/videos/5.mp4"></video>
 
 </div>
 
@@ -535,11 +535,140 @@ The main goal of the preprocessing module is to create the training set and auto
 
 # Analyzing LPFs
 
+* In collaboration with the Experimental and Computational Electrophysiology Group (https://cajal.csic.es/en/experimental-and-computational-electrophysiology/), which belongs to the Cajal Neuroscience Center at the Spanish National Research Council (CSIC).
+
+<br>
+
+* They are interested in brain activity using intracranial EEG recordings.
+* The signals captured by electrodes are known as local field potentials (LFPs).
+* These signals are composed of the sum of neuronal activity from different regions.
+* This group has been working for years on the development of blind source separation techniques to isolate activity from different brain regions.
+* Several methods exist, but they work with a customized version of Independent Component Analysis (ICA).
+* This technique is not free from limitations.
 
 
 <!--
 * Esta es mi linea de trabajo mas reciente
 * He estado trabajando en ella el ultimo año.
+-->
+
+---
+
+<!-- _class: figure -->
+
+# The Cocktail Party Problem
+
+<div class="media" style="--x: 224.69px; --y: 187.30px; --w: 509.15px; --h: 509.15px; --z: 3">
+
+<video controls preload="none" playsinline src="assets/videos/v1.mp4"></video>
+
+</div>
+
+---
+
+<!-- _class: figure -->
+
+# The Cocktail Party Problem
+
+<div class="media" style="--x: 224.69px; --y: 187.30px; --w: 509.15px; --h: 509.15px; --z: 3">
+
+<video controls preload="none" playsinline src="assets/videos/v2.mp4"></video>
+
+</div>
+
+
+---
+
+<!-- _class: text -->
+
+# ICA Limitations
+
+
+* It depends on the number N of sources selected. Several approaches exist to estimate the number of sources.
+<br>
+
+* Basic techniques cannot recover the original signal amplitudes.
+<br>
+
+* Signals cannot be correlated.
+
+    * We must remove synchronous activity from our analysis.
+    * We can only work with baseline activity.
+
+<br><br><br><br><br><br><br><br>
+
+---
 
 
 
+<!-- _class: figure -->
+
+# The Cocktail Party Problem
+
+<div class="media" style="--x: 224.69px; --y: 187.30px; --w: 509.15px; --h: 509.15px; --z: 3">
+
+<video controls preload="none" playsinline src="assets/videos/v3.mp4"></video>
+
+</div>
+
+---
+
+# Motivation
+
+* Although most of our recordings contain baseline activity.
+* This activity is highly complex and apparently random.
+<br>
+
+**Our objective**:
+* To determine whether we are able to identify patterns in baseline activity that allow us to distinguish brain regions;
+* And whether these patterns are consistent across subjects.
+
+> Methods based on handcrafted features usually offer better interpretability, but they are less powerful than DL models.
+* Our secondary objective is to assess whether DL methods identify patterns beyond the handcrafted features we have extracted.
+
+<br><br><br><br>
+
+---
+
+# Methodology
+
+* We have worked on training ML models based on handcrafted features and DL models operating on raw signals to determine whether there are patterns in baseline activity that allow us to identify brain regions.
+
+* We compare models with different levels of complexity to determine whether the relationships among handcrafted features that support generator identification can be captured by linear models or require more flexible nonlinear functions.
+
+<br><br><br><br><br><br><
+
+---
+
+<!-- _class: results -->
+
+# Results
+
+* Both feature-based and deep learning models identify brain regions from baseline activity in the test set.
+
+* Deep learning models perform significantly better than feature-based models.
+
+![Picture 2](assets/images/r1.png)
+
+---
+
+<!-- _class: results -->
+
+# Results
+
+Does deep learning capture patterns beyond our handcrafted features?
+
+* We first examined the transformer's predictions and output probabilities.
+* We then focused on cases misclassified by the feature-based models.
+* In these cases, the deep learning model made predictions with high confidence.
+
+![Picture 2](assets/images/r2.png)
+
+--- 
+# Future lines of work
+* In recent years, significant effort has been devoted to the study of DL interpretability:
+    * Explainable AI (XAI)
+    * Mechanistic interpretability
+  > This is certainly easier with images and text, but it is worth trying.
+* Once we have shown that baseline activity contains patterns that allow us to identify brain regions, we want to determine whether we can distinguish healthy regions from regions with pathological activity.
+  > In the context of epilepsy, seizures are sometimes provoked to identify regions. Being able to detect a region with pathological activity using baseline activity would be a major advance.

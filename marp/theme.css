@@ -2,7 +2,7 @@
  * @theme vg-lab
  * @size 4:3 960px 720px
  *
- * Five reusable layouts: cover, text, split, sidebar, figure.
+ * Reusable layouts: cover, text, split, sidebar, figure, results.
  * Local coordinates are allowed only on exceptional objects in Markdown.
  * Keep this file beside presentacion.md so relative asset URLs remain valid.
  */
@@ -204,6 +204,29 @@ section > p:has(> img, > video) > :is(img, video), section > video {
   object-fit: contain;
 }
 section.split > p:has(> img) > img { object-fit: fill; }
+
+/* Results: text above a chart that fits the remaining body area. */
+section.results {
+  display: flex;
+  flex-direction: column;
+  padding: 184px 48px 24px;
+  --body-size: 20px;
+  --paragraph-gap: 8px;
+}
+section.results > :is(p, ul, ol) {
+  flex-shrink: 0;
+  margin-top: 0;
+}
+section.results > :is(ul, ol) { padding-left: 24px; }
+section.results li { margin: 4px 0; }
+section.results > p:has(> img) {
+  position: relative;
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  margin: 12px 0 0;
+}
+section.results > p:has(> img) > img { object-fit: contain; }
 
 /* Image and area highlights share one coordinate system. */
 section.figure > .diagram {

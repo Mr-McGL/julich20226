@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-LAYOUTS = {'cover', 'text', 'split', 'sidebar', 'figure'}
+LAYOUTS = {'cover', 'text', 'split', 'sidebar', 'figure', 'results'}
 
 
 def main() -> None:
