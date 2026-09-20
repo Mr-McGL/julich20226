@@ -180,10 +180,10 @@ section.sidebar > :nth-child(n+3 of p:has(> img, > video), video) { top: 466px; 
 
 /* 5. Figure: a centered illustration; local divs handle unusual collages. */
 section.figure > :is(p:has(> img, > video), video) {
-  left: 292.19px;
-  top: 146px;
-  width: 423.46px;
-  height: 487.05px;
+  left: 48px;
+  top: 184px;
+  width: 864px;
+  height: 480px;
 }
 
 /* Native Markdown media, shared by all regular layouts. */
@@ -203,7 +203,53 @@ section > p:has(> img, > video) > :is(img, video), section > video {
   max-height: none;
   object-fit: contain;
 }
-section.split > p:has(> img) > img, section.figure > p:has(> img) > img { object-fit: fill; }
+section.split > p:has(> img) > img { object-fit: fill; }
+
+/* Image and area highlights share one coordinate system. */
+section.figure > .diagram {
+  position: absolute;
+  left: 50%;
+  top: 184px;
+  height: 480px;
+  aspect-ratio: var(--diagram-ratio);
+  transform: translateX(-50%);
+  z-index: 3;
+}
+section .diagram > p, section .diagram img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+}
+section .diagram-highlight {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--w);
+  height: var(--h);
+  border: 3px solid #e21b23;
+  border-radius: 3px;
+  background: transparent;
+  pointer-events: none;
+}
+
+/* Keep stage labels below the figure, without covering diagram content. */
+section.figure > .figure-caption {
+  position: absolute;
+  left: 48px;
+  top: 674px;
+  width: 864px;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+}
 
 /* Exceptional objects: only geometry stays in the Markdown.
  * These components never identify a slide number, title or image filename.

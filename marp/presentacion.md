@@ -3,31 +3,35 @@ marp: true
 theme: vg-lab
 size: 4:3
 paginate: false
-title: 'Inside VG-LAB: My Role and Some of Work Lines'
+title: 'Inside VG-LAB: My Role and Selected Research Areas'
 author: 'Marcos García Lorenzo'
 ---
 
 <!-- _class: cover -->
 
-# Inside VG-LAB: <br>*Some of Work Lines*
+# Inside VG-LAB: <br>*Selected Research Areas*
 
 *Marcos García Lorenzo*
 marcos.garcía@urjc.es
+
+
+<!--
+
+-->
 
 ---
 
 <!-- _class: split -->
 
-# URJC
+# URJC – Rey Juan Carlos University
 
-* URJC stands for Universidad Rey Juan Carlos
-* Fundada en 1996
-* 6ª Universidad Pública de la CAM
-* 5 Campus: Madrid, Móstoles, Alcorcón, Fuenlabrada y Aranjuez
-* Más de 40.000 alumnos
-* 2ª Universidad de la CAM y 7ª de España en número de alumnos
+* Founded in 1996
+* Sixth public university established in the Community of Madrid
+* 5 campuses: Madrid, Móstoles, Alcorcón, Fuenlabrada, and Aranjuez
+* More than 40,000 students
+* Second in the Community of Madrid and seventh in Spain by student enrollment
 
-![Imagen 4](assets/images/image5.png)
+![Image 4](assets/images/image5.png)
 
 ---
 
@@ -37,11 +41,12 @@ marcos.garcía@urjc.es
 
 <div class="box" style="--x: 132.24px; --y: 309px; --w: 367.77px; --h: 268.83px; --z: 4; --fill: white">
 
-* Around 200 faculty members.
-* 8 simple degrees
-* 9 double degrees
-* 6 Master Degree
-* 1 Phd Program in IT
+* Computer Science School
+* Around 200 faculty members
+* 8 bachelor's degree programs
+* 9 double degree programs
+* 6 master's degree programs
+* 1 PhD program in IT
 
 </div>
 
@@ -53,7 +58,7 @@ marcos.garcía@urjc.es
 
 <div class="media" style="--x: 132.24px; --y: 173.06px; --w: 704.50px; --h: 116.40px; --z: 3; --outline: 2.66px solid rgba(0,0,0,1.0000); --outline-offset: -1.33px; --image-left: -3.02531%; --image-top: -257.36380%; --image-width: 257.25458%; --image-height: 502.13407%">
 
-![Imagen 5](assets/images/image8.jpg)
+![Image 5](assets/images/image8.jpg)
 
 </div>
 
@@ -101,15 +106,15 @@ MÓSTOLES
 
 # VG-LAB
 
-**Primeras lineas de trabajo:**
+**Early research areas:**
 
-* **Computer graphics:** Virtual reality, haptic interaction, medical trainers, simulation, rendering
+* **Computer graphics:** Virtual reality, haptic interaction, medical training simulators, simulation, rendering
 * **High-performance computing:** Distributed computing, GPGPU, load balancing
 
-**Lineas actuales:**
+**Current research areas:**
 
-* **Visualization:** scientific visualization, information visualization and exploratory analysis
-* **Machine leaning and Deep learning**
+* **Visualization:** Scientific visualization, information visualization, and exploratory analysis
+* **Machine learning and deep learning**
 
 ---
 
@@ -142,11 +147,8 @@ MÓSTOLES
 </div>
 
 <!--
-
-
-Ingenierías Técnicas de Informática de Sistemas y de Gestión (desde el curso 97-98)
-
-Escuela Técnica Superior de Ingeniería Informática, creada en julio del 2007
+Technical degree programs in Systems and Management Informatics have been offered since the 1997–1998 academic year.
+The School of Computer Engineering was established in July 2007.
 -->
 
 ---
@@ -155,7 +157,7 @@ Escuela Técnica Superior de Ingeniería Informática, creada en julio del 2007
 
 # Computer Graphics and Medical Simulation 
 
-***Projectional Radiography Simulator***: An interactive learning environment for diagnostic radiography that enables educators to bridge the disconnects between theory and practice
+***Projectional Radiography Simulator***: An interactive learning environment for diagnostic radiography that helps educators connect theory and practice
 
 [https://vg-lab.es/xraysim/](https://vg-lab.es/xraysim/)
 
@@ -168,61 +170,61 @@ Escuela Técnica Superior de Ingeniería Informática, creada en julio del 2007
 ![Picture 2](assets/images/image15.png)
 
 <!--
-XRay:
-Entorno seguro para el entrenamiento técnicos en radiología evitando riesgos de exposición a radiación
-Permite simular el procedimiento completo. Posicionamiento de paciente y configuración de la máquina
-Permite incluir distintos modelos de paciente de forma sencilla.
-Colaboración con hospitales de UK y la universidad de Bangor
-
-
+X-ray simulator:
+This is a safe environment for training radiographers, with no risk of radiation exposure.
+It simulates the full procedure, including patient positioning and machine settings.
+Different patient models can be added easily.
+This work is a collaboration with hospitals in the UK and Bangor University.
 -->
 
 ---
 
 <!-- _class: sidebar -->
 
-# Simulated X-Ray Image Enhancing
+# Enhancing Simulated X-Ray Images
 
 **Deterministic simulation** +  
-**Deep Learning**  
-to mimic computationally expensive high-quality Montecarlo simulations
+**Deep learning**  
+to mimic high-quality Monte Carlo simulations with a high computational cost
 
 <div class="media" style="--x: 349.86px; --y: 199.62px; --w: 576.12px; --h: 246.30px; --z: 4">
 
-![Imagen 18](assets/images/image19.png)
+![Image 18](assets/images/image19.png)
 
 </div>
 
 <div class="media" style="--x: 386.14px; --y: 445.27px; --w: 107.09px; --h: 236.87px; --z: 5">
 
-![Imagen 20](assets/images/image20.png)
+![Image 20](assets/images/image20.png)
 
 </div>
 
 <div class="media" style="--x: 586.98px; --y: 458.48px; --w: 288.09px; --h: 214.66px; --z: 6; --image-left: -31.31065%; --image-top: -35.65964%; --image-width: 169.64104%; --image-height: 170.75920%">
 
-![Imagen 22](assets/images/image21.png)
+![Image 22](assets/images/image21.png)
 
 </div>
 
 <!--
-Simulated X-Ray Image Enhancing 
-Las técnicas de Montecarlo permiten simular de forma precisa cómo los fotones interactúan con los distintos materiales de la escena 
-Problema: obtener buenos tiene un coste computacional elevado.
-La imagen de arriba a la izquierda se ha simulado utilizando 10^9 fotones en unas 70 horas (en un servidor con capacidad para ejecutar 20 hilos en paralelo!), la imagen del centro se simula en menos de un segundo, en un PC de sobremesa. 
-Problema: Al simularse de forma determinista solo se tiene en cuenta la energía que absorben los tejidos, no el scatering. 
-Pretendemos usar DL para añadir efectos de scattering en la imagen final.
-
-
-
-
+Enhancing simulated X-ray images:
+Monte Carlo methods accurately simulate how photons interact with different materials in the scene.
+However, producing high-quality images takes a lot of computing time.
+The top-left image was simulated using one billion photons. It took about 70 hours on a server running 20 threads in parallel.
+The center image was simulated in less than one second on a desktop PC.
+However, this deterministic simulation only accounts for the energy absorbed by tissues. It does not include scattering.
+We aim to use deep learning to add scattering effects to the final image.
 -->
 
 ---
 
 <!-- _class: text -->
 
-# VG-Lab in HPB
+# VG-LAB in the Human Brain Project
+
+<!--
+The Human Brain Project, or HBP, was a European research project.
+These were the tasks that VG-LAB contributed to during its different phases.
+-->
 
 **Ramp-Up**  
 > T7.3.2 – Neuroscience-specific visualization
@@ -241,45 +243,42 @@ Pretendemos usar DL para añadir efectos de scattering en la imagen final.
 
 ---
 
-<!-- _class: text -->
+<!-- _class: split -->
 
-# VG-Lab in EBRAIN
+# VG-LAB in EBRAINS
+
+<!--
+EBRAINS is a European project.
+Here are our contributions to EBRAINS 2.0 and the Virtual Brain Twin project.
+-->
 
 **Virtual Brain Twin Project (HORIZON-HLTH-2023-TOOL-05-03)**  
-> Developing an Integrative Workflows GUI
+> Developing a GUI for integrative workflows
 
+**EBRAINS 2.0 Project (HORIZON-INFRA-2022-SERV-B-01)**
+> Developing SimVisSuite, a visualization framework for neuroscience data
 
+![EBRAINS 2.0](assets/images/EBRAINS.png)
 
 ---
 
 <!-- _class: figure -->
 
-# Visualization ecosystem
+# Visualization Ecosystem
 
 
 <div class="media" style="--x: 155.78px; --y: 172.00px; --w: 675.26px; --h: 505.61px; --z: 3">
 
-![Marcador de contenido 4](assets/images/image22.png)
+![Content placeholder 4](assets/images/image22.png)
 
 </div>
 
-<!--
-MelVin: https://vg-lab.es/melvin/
-Es un Metaframework WEB para el desarrollo de aplicaciones de visualización, especialmente útil en tareas de prototipado rápido y análisis exploratorio interactivo.
-Ha sido diseñado para integrar visualizaciones y procesos de análisis de datos, desarrollados con distintas tecnologías, dotándolos de mecanismos de interoperabilidad
-Pensado para extenderse y adaptarse a distintas áreas de investigación. 
-El proceso de análisis de datos puede definirse de forma simple mediante diagramas de flujo
-A diferencia de la mayoría de las aplicaciones de minería de datos basadas en diagramas de flujo, MeLVin permite a los usuarios incluir visualizaciones y las interacciones entre estas como parte del proceso de análisis y no sólo como una herramienta para mostrar los resultados finales
-
-
-
--->
-
 ---
+
 
 <!-- _class: sidebar -->
 
-# Melvin
+# MeLVin
 
 A graphical meta-framework for prototyping data visualization and exploratory analysis
 
@@ -293,37 +292,39 @@ A graphical meta-framework for prototyping data visualization and exploratory an
 
 
 <!--
-MelVin: https://vg-lab.es/melvin/
-Es un Metaframework WEB para el desarrollo de aplicaciones de visualización, especialmente útil en tareas de prototipado rápido y análisis exploratorio interactivo.
-Ha sido diseñado para integrar visualizaciones y procesos de análisis de datos, desarrollados con distintas tecnologías, dotándolos de mecanismos de interoperabilidad
-Pensado para extenderse y adaptarse a distintas áreas de investigación. 
-El proceso de análisis de datos puede definirse de forma simple mediante diagramas de flujo
-A diferencia de la mayoría de las aplicaciones de minería de datos basadas en diagramas de flujo, MeLVin permite a los usuarios incluir visualizaciones y las interacciones entre estas como parte del proceso de análisis y no sólo como una herramienta para mostrar los resultados finales
-
-
-
+MeLVin: https://vg-lab.es/melvin/
+MeLVin is a web-based meta-framework for building visualization applications.
+It is especially useful for rapid prototyping and interactive exploratory analysis.
+It connects visualizations and data analysis tools built with different technologies, so they can work together.
+It can be extended and adapted to different research areas.
+Users can define the data analysis process with simple flowcharts.
+Most flowchart-based data mining tools use visualizations only to show the final results.
+MeLVin also lets users include visualizations and interactions between them as part of the analysis process.
 -->
 
 ---
 
-<!-- _class: text -->
+# VG-LAB in the Human Brain Project
 
-# VG-Lab in HPB
+<!--
+The Human Brain Project, or HBP, was a European research project.
+These were the tasks that VG-LAB contributed to during its different phases.
+-->
 
 **Ramp-Up**  
-T7.3.2 – Neuroscience-specific visualization
+> T7.3.2 – Neuroscience-specific visualization
 
 **SGA1**  
-**T1.4.2 – Visual analysis tools for microanatomical data**  
-T7.3.2 – Neuroscience-specific visualization
+> **T1.4.2 – Visual analysis tools for microanatomical data**  
+> T7.3.2 – Neuroscience-specific visualization
 
 **SGA2**  
-T1.4.4 – **Towards an integrated framework for the acquisition and early analysis of microanatomical data**  
-T7.3.8 – In-situ visual analysis of simulation data  
-T7.3.9 – Low-level visualisation backend
+> **T1.4.4 – Towards an integrated framework for the acquisition and early analysis of microanatomical data** 
+> T7.3.8 – In-situ visual analysis of simulation data  
+>T7.3.9 – Low-level visualisation backend
 
 **SGA3**  
-T5.7 – Visualisation framework (SC3)
+>  T5.7 – Visualisation framework (SC3)
 
 ---
 
@@ -331,12 +332,12 @@ T5.7 – Visualisation framework (SC3)
 
 # DeepSpineNet
 
-**Deep Learning-based automatic dendritic spine segmentation +**  
+**Automatic dendritic spine segmentation using deep learning** +  
 user-supervised correction algorithms
 
 [https://vg-lab.es/deepspinenet/](https://vg-lab.es/deepspinenet/)
 
-[https://gitfront.io/r/user-4306573/be116855b22f779ae17fb981f89fbd138ac27133/DeepSpineNet-GUI/](https://gitfront.io/r/user-4306573/be116855b22f779ae17fb981f89fbd138ac27133/DeepSpineNet-GUI/)
+
 
 <video controls preload="none" playsinline poster="assets/images/image28.png" src="assets/videos/slide-13-1419470627.mp4" aria-label="DSNet2"></video>
 
@@ -347,111 +348,29 @@ user-supervised correction algorithms
 ![Picture 4](assets/images/image27.png)
 
 <!--
-Problemas:
-Los dataset científicos suelen ser escasos y débilmente etiquetados. 
-Proponemos:
-Algoritmos automáticos para mejorar la calidad de los datos de entrenamiento
-Técnicas que reducen los problemas de “overfiting” derivados de la mala calidad de los datos, durante el entrenamiento.
-Algoritmos de corrección que permiten seguir mejorando el GT.
+Challenges:
+Scientific datasets are often small, and their labels are incomplete or imprecise.
+We propose three approaches:
+- Automatic algorithms to improve the quality of the training data.
+- Training techniques to reduce overfitting caused by poor-quality data.
+- Correction algorithms to further improve the ground-truth labels.
 -->
 
 ---
 
-<!-- _class: figure -->
-<!-- _footer: "26" -->
+<!-- _class: text -->
 
-# Computer Vision and Deep Learning (II)
+# DeepSpineNet
 
-<div class="media" style="--x: 676.81px; --y: 169.01px; --w: 150.67px; --h: 397.52px; --z: 3">
+Deep learning models have been successfully applied to many segmentation and classification problems.
 
-![Imagen 17](assets/images/image31.png)
-
-</div>
-
-<div class="media" style="--x: 311.67px; --y: 169.01px; --w: 150.67px; --h: 397.52px; --z: 5">
-
-![Imagen 8](assets/images/image32.png)
-
-</div>
-
-<div class="media" style="--x: 494.24px; --y: 169.01px; --w: 150.67px; --h: 397.52px; --z: 6">
-
-![Imagen 13](assets/images/image33.png)
-
-</div>
-
-<div class="media" style="--x: 161.23px; --y: 169.01px; --w: 150.67px; --h: 397.52px; --z: 7">
-
-![Imagen 14](assets/images/image34.png)
-
-</div>
-
-<div class="caption" style="--x: 676.81px; --y: 566.67px; --w: 150.43px; --h: 55.75px; --z: 4">
-
-**Instance segmentation**
-
-</div>
-
-<div class="caption" style="--x: 162.11px; --y: 566.67px; --w: 149.27px; --h: 55.75px; --z: 8">
-
-**RAW image**
-
-</div>
-
-<div class="caption" style="--x: 312.44px; --y: 566.67px; --w: 149.90px; --h: 55.75px; --z: 9">
-
-**Manual labels**
-
-</div>
-
-<div class="caption" style="--x: 494.24px; --y: 566.67px; --w: 150.67px; --h: 55.75px; --z: 10">
-
-**Semantic segmentation**
-
-</div>
-
-<div class="arrow" style="--x: 632.25px; --y: 340.00px; --w: 60.75px; --h: 62.00px; --z: 11; --fill: rgba(68,114,196,1.0000)">
-
-
-
-</div>
-
-<!--
-In the time remaining, 
-I would like to present our work 
-on the segmentation of dendritic spines 
-capture with confocal microscopy.  
-
--->
-
----
-
-<!-- _class: figure -->
-<!-- _footer: "27" -->
-
-<div class="panel" style="--x: 0px; --y: 0px; --w: 960px; --h: 720px; --z: 1; --fill: rgb(77, 115, 182)">
-
-
-
-</div>
-
-<div class="box box-title" style="--x: 0px; --y: 12px; --w: 372.65px; --h: 191.72px; --z: 3">
-
-# Computer Vision and Deep Learning (III)
-
-</div>
-
-<div class="box compact" style="--x: 1.18px; --y: 230.35px; --w: 371.47px; --z: 4">
-
-Deep learning-based models have been successfully applied to many segmentation and classification problems.
-
-These techniques face several challenges that hinder their application in the biomedical field:
+Several challenges make these techniques difficult to apply in biomedical research:
 
 **Image stacks:**  
-Current state of the art models work with 2D images  
-3D image stacks require complex models
+Many state-of-the-art models work with 2D images.  
+3D image stacks require complex models.
 
-**Scarce datasets:**  
+**Limited training data:**  
 Complex problems require complex models.  
 Complex models require large datasets for training.
 
@@ -459,172 +378,143 @@ Complex models require large datasets for training.
 Incomplete segmentations.  
 For instance, scientists are generally not interested in segmenting the entire image.
 
-</div>
+<!--
+As most of you already know, deep learning models work well for many segmentation and classification tasks.
+However, applying them to biomedical images can be difficult.
 
-<div class="media" style="--x: 389.62px; --y: 0.00px; --w: 570.37px; --h: 720.00px; --z: 5">
+First, we work with 3D image stacks.
+Many state-of-the-art models mainly work with 2D images.
+Processing 3D images requires more complex models, often with many parameters.
 
-![Picture 2](assets/derived/s15-object-05-clipped.png)
+These models need large training datasets.
+Labeling dendritic spines is difficult and takes a lot of time.
+This makes it hard to obtain enough labeled data to train reliable models.
+
+Finally, the labels in many datasets are incomplete.
+Researchers are often interested in only one dendritic branch in the image stack.
+As a result, other parts of the image remain unlabeled.
+-->
+---
+
+<!-- _class: figure -->
+
+# DeepSpineNet
+
+![problems](assets/images/img1.png)
+
+---
+
+<!-- _class: figure -->
+
+# DeepSpineNet
+
+<div class="diagram" style="--diagram-ratio: 1084 / 935">
+
+![Picture 2](assets/images/image36.jpg)
 
 </div>
 
 <!--
-As most of you already know, deep learning-based models have been successfully applied to many segmentation and classification problems.  
- 
-However, 
-in this problem, and in this field,
-these techniques have to face challenges 
-that hinder their application.  
- 
-In this case:  
-We have to deal with Image Stacks
-Current state of the art models mainly work with 2D images 
-Additionally,
-       processing 3D images require complex models
- 
-- [Complex problems require complex models with a high number of parameters ]
-And complex models require large datasets for training. 
- 
-Since segmenting dendritic spines  is hard and time-consuming,
-it is difficult to find datasets large enough to train DL models with guarantees.
-
-- Finally, most of the dataset segmentations are incomplete.
-Generally, users are interested only in one branch of the stack
-and some parts of the image are unsegemtned.
-
-
+Our approach has three components:
+- A preprocessing module to prepare the data.
+- A deep learning model designed for this task.
+- A postprocessing module that lets users correct the model's errors.
 -->
 
 ---
 
 <!-- _class: figure -->
-<!-- _footer: "28" -->
 
-# Computer Vision and Deep Learning (IV)
+# DeepSpineNet
+
+<div class="diagram" style="--diagram-ratio: 1084 / 935">
 
 ![Picture 2](assets/images/image36.jpg)
 
-<!--
-[Our proposal to address these challenges ]
-Our proposed solution to address these challenges 
-
-is based on three components:  
- 
-- A data pre-processing module.  
-- A specific DL model adapted to this problem.  
-- And a postprocessing module that allows the user to correct the model’s errors. 
-
--->
-
----
-
-<!-- _class: figure -->
-<!-- _footer: "29" -->
-
-# Computer Vision and Deep Learning (IV)
-
-<div class="command">
-
-ffmpeg -i media10.avi \\  
--map 0:v:0 -map 0:a? \\  
--c:v libx264 -crf 18 -preset medium \\  
--c:a aac -b:a 192k \\  
--movflags +faststart \\  
-media10.mp4
+<div class="diagram-highlight" role="img" aria-label="Preprocessing highlighted area" style="--x: 14.2066%; --y: 3.6364%; --w: 59.5018%; --h: 24.0642%"></div>
 
 </div>
 
-![Picture 2](assets/images/image36.jpg)
-
-<div class="callout" style="--x: 351.00px; --y: 159.16px; --w: 269.25px; --h: 138.83px; --z: 4; --fill: rgba(0,0,0,0.5000)">
+<div class="figure-caption">
 
 **Preprocessing**
 
 </div>
 
 <!--
-Our proposed solution to address these challenges is based on three components:  
- 
-- A data pre-processing module.  
-- A specific DL model adapted to this problem.  
-- And a postprocessing module that allows the user to correct the model’s errors. 
-
+Our approach has three components:
+- A preprocessing module to prepare the data.
+- A deep learning model designed for this task.
+- A postprocessing module that lets users correct the model's errors.
 -->
 
 ---
 
 <!-- _class: figure -->
-<!-- _footer: "30" -->
 
-# Computer Vision and Deep Learning (IV)
+
+# DeepSpineNet
+
+<div class="diagram" style="--diagram-ratio: 1084 / 935">
 
 ![Picture 2](assets/images/image36.jpg)
 
-<div class="callout" style="--x: 424.50px; --y: 250.69px; --w: 269.25px; --h: 138.83px; --z: 4; --fill: rgba(0,0,0,0.5000)">
+<div class="diagram-highlight" role="img" aria-label="Training the DL model highlighted area" style="--x: 0.5535%; --y: 27.8075%; --w: 98.8930%; --h: 21.6043%"></div>
 
-**Training the DL model**
+<div class="diagram-highlight" role="img" aria-label="DL model highlighted area" style="--x: 13.3764%; --y: 58.3957%; --w: 7.3801%; --h: 6.4171%"></div>
 
 </div>
 
-<div class="callout" style="--x: 292.19px; --y: 389.19px; --w: 147.30px; --h: 139.16px; --z: 5; --fill: rgba(0,0,0,0.5000)">
+<div class="figure-caption">
 
-**DL model**
+**Training the DL model** · **DL model**
 
 </div>
 
 <!--
-Our proposed solution to address these challenges is based on three components:  
- 
-- A data pre-processing module.  
-- A specific DL model 
-adapted to this problem.  
-- And a postprocessing module that allows the user to correct the model’s errors. 
-
+Our approach has three components:
+- A preprocessing module to prepare the data.
+- A deep learning model designed for this task.
+- A postprocessing module that lets users correct the model's errors.
 -->
 
 ---
 
 <!-- _class: figure -->
-<!-- _footer: "31" -->
 
-# Computer Vision and Deep Learning (IV)
+# DeepSpineNet
+
+<div class="diagram" style="--diagram-ratio: 1084 / 935">
 
 ![Picture 2](assets/images/image36.jpg)
 
-<div class="callout" style="--x: 436.50px; --y: 400.69px; --w: 279.16px; --h: 224.30px; --z: 4; --fill: rgba(0,0,0,0.5000)">
+<div class="diagram-highlight" role="img" aria-label="Postprocessing highlighted area" style="--x: 36.0701%; --y: 53.5829%; --w: 63.2841%; --h: 45.2406%"></div>
+
+</div>
+
+<div class="figure-caption">
 
 **Postprocessing**
 
 </div>
 
 <!--
-Our proposed solution to address these challenges is based on three components:  
- 
-- A data pre-processing module.  
-- A specific DL model adapted to this specific problem.  
-- And a postprocessing  module that allows the user to correct the model’s errors. 
-
+Our approach has three components:
+- A preprocessing module to prepare the data.
+- A deep learning model designed for this task.
+- A postprocessing module that lets users correct the model's errors.
 -->
 
 ---
 
 <!-- _class: figure -->
-<!-- _footer: "32" -->
 
-# Computer Vision and Deep Learning (V)
-
-<div class="media" style="--x: 97.50px; --y: 187.50px; --w: 813.00px; --h: 345.00px; --z: 3">
+# DeepSpineNet
 
 ![Picture 6](assets/images/image37.jpg)
 
-</div>
-
 <!--
-The preprocessing module 
-primary goal 
-is to create the training set and 
-[automatically] reconstruct the necks 
-of disconnected spines.  
-
+The main goal of the preprocessing module is to create the training set and automatically reconstruct the necks of disconnected dendritic spines.
 -->
 
 ---
@@ -643,11 +533,13 @@ of disconnected spines.
 
 <!-- _class: text -->
 
-# My work during these last year
+# Analyzing LPFs
 
----
 
-<!-- _class: text -->
-<!-- _backgroundImage: url("assets/images/image6.png") -->
 
-# MMy
+<!--
+* Esta es mi linea de trabajo mas reciente
+* He estado trabajando en ella el ultimo año.
+
+
+
