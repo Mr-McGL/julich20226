@@ -62,9 +62,9 @@ La diapositiva azul, con una gran imagen a la derecha, se mantiene como composic
 
 Edita `theme.css`. Al principio se definen el fondo, la cabecera y el título. Después aparecen, por separado, los cinco tipos y los componentes de las excepciones.
 
-Las variables `--title-left`, `--title-top`, `--title-width` y `--title-height` controlan los títulos. Las variables `--body-left`, `--body-top`, `--body-width`, `--body-size` y `--paragraph-gap` controlan el área de texto. La fotografía y los logotipos de portada están en `section.cover` y sus pseudoelementos.
+Las variables `--title-left`, `--title-top`, `--title-width` y `--title-height` controlan los títulos. Las variables `--body-left`, `--body-top`, `--body-width`, `--body-size` y `--paragraph-gap` controlan el área de texto. La fotografía y los logotipos de portada están en las capas de fondo de `section.cover`. La fotografía se muestra completa y conserva sus proporciones; los logotipos se sitúan en la franja inferior.
 
-Los pies originales del 26 al 32 se mantienen como directivas `_footer`. Su presencia selecciona automáticamente el fondo con pie institucional; no exige una clase adicional. La diapositiva de ETSII y la última conservan sus variantes de fondo mediante la directiva `_backgroundImage`.
+Los pies originales del 26 al 32 se mantienen como directivas `_footer`. Su presencia conserva las posiciones del título y de la numeración; no exige una clase adicional. Las diapositivas usan el fondo institucional sin el logotipo de ETSII en el pie.
 
 Al agrupar los diseños se han unificado las posiciones del texto común y de la cuadrícula lateral. **El resultado no pretende coincidir píxel a píxel con la versión anterior**: esa normalización evita las antiguas clases específicas. Las composiciones excepcionales conservan sus coordenadas y recortes.
 

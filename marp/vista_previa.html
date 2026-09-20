@@ -83,9 +83,9 @@ section > p:not(:has(> img, > video)), section > ul, section > ol {
   overflow-wrap: break-word;
 }
 
-/* Original page labels automatically select the shared footer background. */
+/* Original page labels retain their title and footer positioning. */
 section:has(> footer) {
-  background-image: url("assets/images/image1.png");
+  background-image: url("assets/images/image6.png");
   --title-left: 66px;
   --title-top: 71.08px;
   --title-width: 828px;
@@ -117,11 +117,12 @@ section.cover {
   padding: 86.86px 6.97px 150.19px 9.20px;
   color: white;
   text-align: center;
-  background-image: url("assets/images/image4.png"),
-                    url("assets/images/image2.jpg"),
-                    url("assets/images/image1.png");
-  background-position: 1016.88px 569.23px, -93.05px -0.41px, center;
-  background-size: 113.84px 113.84px, 1233.29px 719.69px, cover;
+  background-color: #242424;
+  background-image: url("assets/images/image3.png"),
+                    url("assets/images/image4.png"),
+                    url("assets/images/image2.jpg");
+  background-position: 25px 607px, right 25px bottom 25px, center top;
+  background-size: 432.31px 93.75px, 113.84px 113.84px, contain;
   background-repeat: no-repeat;
 }
 section.cover > h1 {
@@ -139,21 +140,7 @@ section.cover > h1 {
 section.cover > p { z-index: 4; margin: 0 0 8px; }
 section.cover > p:last-child { margin-bottom: 0; }
 section.cover::before, section.cover::after {
-  content: "";
-  position: absolute;
-  display: block;
-  height: 93.75px;
-  background-image: url("assets/images/image3.png");
-  background-repeat: no-repeat;
-  background-size: 432.31px 93.75px;
-  z-index: 5;
-}
-section.cover::before { left: 25px; top: 607.13px; width: 167.71px; }
-section.cover::after {
-  left: 198.88px;
-  top: 600.86px;
-  width: 281.11px;
-  background-position: -151.20px 0;
+  display: none;
 }
 
 /* 2. Text: ordinary Markdown flows across the full body width. */
@@ -168,7 +155,7 @@ section.split {
   --title-top: 19.80px;
   --title-width: 828px;
   --title-height: 139.16px;
-  background-image: url("assets/images/image1.png");
+  background-image: url("assets/images/image6.png");
 }
 section.split > :is(p:has(> img, > video), video) {
   left: 482.27px;
@@ -300,26 +287,30 @@ section .command {
 </style>
 </head>
 <body>
-<div id="viewport"><main id="stage"><section class="cover" data-slide="1" aria-label="Slide 1"><h1>Inside VG-LAB: My Role and Some of Work Lines</h1>
-<p>Marcos García Lorenzo</p>
-<p>marcos.garcía@urjc.es</p>
+<div id="viewport"><main id="stage"><section class="cover" data-slide="1" aria-label="Slide 1"><h1>Inside VG-LAB: <br><em>Some of Work Lines</em></h1>
+<p><em>Marcos García Lorenzo</em>
+marcos.garcía@urjc.es</p>
 </section>
 <section class="split" data-slide="2" aria-label="Slide 2"><h1>URJC</h1>
-<p>URJC stands for Universidad Rey Juan Carlos</p>
-<p>Fundada en 1996</p>
-<p>6ª Universidad Pública de la CAM</p>
-<p>5 Campus: Madrid, Móstoles, Alcorcón, Fuenlabrada y Aranjuez</p>
-<p>Más de 40.000 alumnos</p>
-<p>2ª Universidad de la CAM y 7ª de España en número de alumnos</p>
+<ul>
+<li>URJC stands for Universidad Rey Juan Carlos</li>
+<li>Fundada en 1996</li>
+<li>6ª Universidad Pública de la CAM</li>
+<li>5 Campus: Madrid, Móstoles, Alcorcón, Fuenlabrada y Aranjuez</li>
+<li>Más de 40.000 alumnos</li>
+<li>2ª Universidad de la CAM y 7ª de España en número de alumnos</li>
+</ul>
 <p><img src="assets/images/image5.png" alt="Imagen 4" /></p>
 </section>
-<section class="split" style="background-image: url(&quot;assets/images/image6.png&quot;)" data-slide="3" aria-label="Slide 3"><h1>ETSII</h1>
+<section class="split" data-slide="3" aria-label="Slide 3"><h1>ETSII</h1>
 <div class="box" style="--x: 132.24px; --y: 309px; --w: 367.77px; --h: 268.83px; --z: 4; --fill: white">
-<p>Around 200 faculty members.</p>
-<p>8 simple degrees</p>
-<p>9 double degrees</p>
-<p>6 Master Degree</p>
-<p>1Phd Program in IT</p>
+<ul>
+<li>Around 200 faculty members.</li>
+<li>8 simple degrees</li>
+<li>9 double degrees</li>
+<li>6 Master Degree</li>
+<li>1 Phd Program in IT</li>
+</ul>
 </div>
 <div class="media" style="--x: 498.96px; --y: 311.57px; --w: 337.79px; --h: 184.95px; --z: 2; --outline: 2.66px solid rgba(0,0,0,1.0000); --outline-offset: -1.33px">
 <p><img src="assets/images/image7.png" alt="image8.png" /></p>
@@ -344,11 +335,15 @@ section .command {
 </section>
 <section class="text" data-slide="5" aria-label="Slide 5"><h1>VG-LAB</h1>
 <p><strong>Primeras lineas de trabajo:</strong></p>
-<p><strong>Computer graphics:</strong> Virtual reality, haptic interaction, medical trainers, simulation, rendering</p>
-<p><strong>High-performance computing:</strong> Distributed computing, GPGPU, load balancing</p>
+<ul>
+<li><strong>Computer graphics:</strong> Virtual reality, haptic interaction, medical trainers, simulation, rendering</li>
+<li><strong>High-performance computing:</strong> Distributed computing, GPGPU, load balancing</li>
+</ul>
 <p><strong>Lineas actuales:</strong></p>
-<p><strong>Visualization:</strong> scientific visualization, information visualization and exploratory analysis</p>
-<p><strong>Machine leaning and Deep learning</strong></p>
+<ul>
+<li><strong>Visualization:</strong> scientific visualization, information visualization and exploratory analysis</li>
+<li><strong>Machine leaning and Deep learning</strong></li>
+</ul>
 </section>
 <section class="figure" data-slide="6" aria-label="Slide 6"><h1>Computer Graphics and Medical Simulation</h1>
 <div class="media" style="--x: 77.47px; --y: 198.03px; --w: 331.04px; --h: 166.78px; --z: 2">
@@ -365,7 +360,7 @@ section .command {
 </div>
 </section>
 <section class="sidebar" data-slide="7" aria-label="Slide 7"><h1>Projectional Radiography Simulator</h1>
-<p>An interactive learning environment for diagnostic radiography that enables educators to bridge the disconnects between theory and practice</p>
+<p><strong>An interactive learning environment</strong> for diagnostic radiography that enables educators to bridge the disconnects between theory and practice</p>
 <p><a href="https://vg-lab.es/xraysim/">https://vg-lab.es/xraysim/</a></p>
 <p><video controls preload="none" playsinline poster="assets/images/image18.png" src="assets/videos/slide-07-1158545669.mp4" aria-label="videoplayback"></video></p>
 <p><img src="assets/images/image16.png" alt="Picture 4" /></p>
@@ -387,47 +382,60 @@ to mimic computationally expensive high-quality Montecarlo simulations</p>
 </div>
 </section>
 <section class="text" data-slide="9" aria-label="Slide 9"><h1>VG-Lab in HPB</h1>
-<p><strong>Ramp-Up</strong><br />
+<p><strong>Ramp-Up</strong></p>
+<blockquote>
+<p>T7.3.2 – Neuroscience-specific visualization</p>
+</blockquote>
+<p><strong>SGA1</strong></p>
+<blockquote>
+<p>T1.4.2 – Visual analysis tools for microanatomical data<br />
 T7.3.2 – Neuroscience-specific visualization</p>
-<p><strong>SGA1</strong><br />
-T1.4.2 – Visual analysis tools for microanatomical data<br />
-T7.3.2 – Neuroscience-specific visualization</p>
-<p><strong>SGA2</strong><br />
-T1.4.4 – Towards an integrated framework for the acquisition and early analysis of microanatomical data<br />
+</blockquote>
+<p><strong>SGA2</strong></p>
+<blockquote>
+<p>T1.4.4 – Towards an integrated framework for the acquisition and early analysis of microanatomical data<br />
 T7.3.8 – In-situ visual analysis of simulation data<br />
 T7.3.9 – Low-level visualisation backend</p>
-<p><strong>SGA3</strong><br />
-T5.7 – Visualisation framework (SC3)</p>
+</blockquote>
+<p><strong>SGA3</strong></p>
+<blockquote>
+<p>T5.7 – Visualisation framework (SC3)</p>
+</blockquote>
 </section>
-<section class="figure" data-slide="10" aria-label="Slide 10"><h1>Visualization ecosystem</h1>
-<div class="command">
-<p>ffmpeg -i media10.avi \<br />
--map 0:v:0 -map 0:a? \<br />
--c:v libx264 -crf 18 -preset medium \<br />
--c:a aac -b:a 192k \<br />
--movflags +faststart \<br />
-media10.mp4</p>
-</div>
+<section class="text" data-slide="10" aria-label="Slide 10"><h1>VG-Lab in HPB</h1>
+<p><strong>Ramp-Up</strong></p>
+<blockquote>
+<p>T7.3.2 – Neuroscience-specific visualization</p>
+</blockquote>
+<p><strong>SGA1</strong></p>
+<blockquote>
+<p>T1.4.2 – Visual analysis tools for microanatomical data<br />
+T7.3.2 – Neuroscience-specific visualization</p>
+</blockquote>
+<p><strong>SGA2</strong></p>
+<blockquote>
+<p>T1.4.4 – Towards an integrated framework for the acquisition and early analysis of microanatomical data<br />
+T7.3.8 – In-situ visual analysis of simulation data<br />
+T7.3.9 – Low-level visualisation backend</p>
+</blockquote>
+<p><strong>SGA3</strong></p>
+<blockquote>
+<p>T5.7 – Visualisation framework (SC3)</p>
+</blockquote>
+</section>
+<section class="figure" data-slide="11" aria-label="Slide 11"><h1>Visualization ecosystem</h1>
 <div class="media" style="--x: 155.78px; --y: 172.00px; --w: 675.26px; --h: 505.61px; --z: 3">
 <p><img src="assets/images/image22.png" alt="Marcador de contenido 4" /></p>
 </div>
 </section>
-<section class="sidebar" data-slide="11" aria-label="Slide 11"><h1>Melvin</h1>
+<section class="sidebar" data-slide="12" aria-label="Slide 12"><h1>Melvin</h1>
 <p>A graphical meta-framework for prototyping data visualization and exploratory analysis</p>
 <p><video controls preload="none" playsinline poster="assets/images/image26.png" src="assets/videos/slide-11-2066184930.mp4" aria-label="SnapSave.io-MeLVin(360p)"></video></p>
 <p><img src="assets/images/image23.png" alt="Picture 2" /></p>
 <p><img src="assets/images/image24.png" alt="Picture 6" /></p>
 <p><img src="assets/images/image25.png" alt="Picture 4" /></p>
-<div class="command">
-<p>ffmpeg -i media10.avi \<br />
--map 0:v:0 -map 0:a? \<br />
--c:v libx264 -crf 18 -preset medium \<br />
--c:a aac -b:a 192k \<br />
--movflags +faststart \<br />
-media10.mp4</p>
-</div>
 </section>
-<section class="text" data-slide="12" aria-label="Slide 12"><h1>VG-Lab in HPB</h1>
+<section class="text" data-slide="13" aria-label="Slide 13"><h1>VG-Lab in HPB</h1>
 <p><strong>Ramp-Up</strong><br />
 T7.3.2 – Neuroscience-specific visualization</p>
 <p><strong>SGA1</strong><br />
@@ -440,7 +448,7 @@ T7.3.9 – Low-level visualisation backend</p>
 <p><strong>SGA3</strong><br />
 T5.7 – Visualisation framework (SC3)</p>
 </section>
-<section class="sidebar" data-slide="13" aria-label="Slide 13"><h1>DeepSpineNet</h1>
+<section class="sidebar" data-slide="14" aria-label="Slide 14"><h1>DeepSpineNet</h1>
 <p><strong>Deep Learning-based automatic dendritic spine segmentation +</strong><br />
 user-supervised correction algorithms</p>
 <p><a href="https://vg-lab.es/deepspinenet/">https://vg-lab.es/deepspinenet/</a></p>
@@ -450,7 +458,7 @@ user-supervised correction algorithms</p>
 <p><video controls preload="none" playsinline poster="assets/images/image29.png" src="assets/videos/slide-13-955489805.mp4" aria-label="DSNet3"></video></p>
 <p><img src="assets/images/image27.png" alt="Picture 4" /></p>
 </section>
-<section class="figure" data-slide="14" aria-label="Slide 14"><h1>Computer Vision and Deep Learning (II)</h1>
+<section class="figure" data-slide="15" aria-label="Slide 15"><h1>Computer Vision and Deep Learning (II)</h1>
 <div class="media" style="--x: 676.81px; --y: 169.01px; --w: 150.67px; --h: 397.52px; --z: 3">
 <p><img src="assets/images/image31.png" alt="Imagen 17" /></p>
 </div>
@@ -478,7 +486,7 @@ user-supervised correction algorithms</p>
 <div class="arrow" style="--x: 632.25px; --y: 340.00px; --w: 60.75px; --h: 62.00px; --z: 11; --fill: rgba(68,114,196,1.0000)">
 </div>
 <footer>26</footer></section>
-<section class="figure" data-slide="15" aria-label="Slide 15"><div class="panel" style="--x: 0px; --y: 0px; --w: 960px; --h: 720px; --z: 1; --fill: rgb(77, 115, 182)">
+<section class="figure" data-slide="16" aria-label="Slide 16"><div class="panel" style="--x: 0px; --y: 0px; --w: 960px; --h: 720px; --z: 1; --fill: rgb(77, 115, 182)">
 </div>
 <div class="box box-title" style="--x: 0px; --y: 12px; --w: 372.65px; --h: 191.72px; --z: 3">
 <h1>Computer Vision and Deep Learning (III)</h1>
@@ -500,10 +508,10 @@ For instance, scientists are generally not interested in segmenting the entire i
 <p><img src="assets/derived/s15-object-05-clipped.png" alt="Picture 2" /></p>
 </div>
 <footer>27</footer></section>
-<section class="figure" data-slide="16" aria-label="Slide 16"><h1>Computer Vision and Deep Learning (IV)</h1>
+<section class="figure" data-slide="17" aria-label="Slide 17"><h1>Computer Vision and Deep Learning (IV)</h1>
 <p><img src="assets/images/image36.jpg" alt="Picture 2" /></p>
 <footer>28</footer></section>
-<section class="figure" data-slide="17" aria-label="Slide 17"><h1>Computer Vision and Deep Learning (IV)</h1>
+<section class="figure" data-slide="18" aria-label="Slide 18"><h1>Computer Vision and Deep Learning (IV)</h1>
 <div class="command">
 <p>ffmpeg -i media10.avi \<br />
 -map 0:v:0 -map 0:a? \<br />
@@ -517,7 +525,7 @@ media10.mp4</p>
 <p><strong>Preprocessing</strong></p>
 </div>
 <footer>29</footer></section>
-<section class="figure" data-slide="18" aria-label="Slide 18"><h1>Computer Vision and Deep Learning (IV)</h1>
+<section class="figure" data-slide="19" aria-label="Slide 19"><h1>Computer Vision and Deep Learning (IV)</h1>
 <p><img src="assets/images/image36.jpg" alt="Picture 2" /></p>
 <div class="callout" style="--x: 424.50px; --y: 250.69px; --w: 269.25px; --h: 138.83px; --z: 4; --fill: rgba(0,0,0,0.5000)">
 <p><strong>Training the DL model</strong></p>
@@ -526,25 +534,25 @@ media10.mp4</p>
 <p><strong>DL model</strong></p>
 </div>
 <footer>30</footer></section>
-<section class="figure" data-slide="19" aria-label="Slide 19"><h1>Computer Vision and Deep Learning (IV)</h1>
+<section class="figure" data-slide="20" aria-label="Slide 20"><h1>Computer Vision and Deep Learning (IV)</h1>
 <p><img src="assets/images/image36.jpg" alt="Picture 2" /></p>
 <div class="callout" style="--x: 436.50px; --y: 400.69px; --w: 279.16px; --h: 224.30px; --z: 4; --fill: rgba(0,0,0,0.5000)">
 <p><strong>Postprocessing</strong></p>
 </div>
 <footer>31</footer></section>
-<section class="figure" data-slide="20" aria-label="Slide 20"><h1>Computer Vision and Deep Learning (V)</h1>
+<section class="figure" data-slide="21" aria-label="Slide 21"><h1>Computer Vision and Deep Learning (V)</h1>
 <div class="media" style="--x: 97.50px; --y: 187.50px; --w: 813.00px; --h: 345.00px; --z: 3">
 <p><img src="assets/images/image37.jpg" alt="Picture 6" /></p>
 </div>
 <footer>32</footer></section>
-<section class="figure" data-slide="21" aria-label="Slide 21"><h1>EspINA</h1>
+<section class="figure" data-slide="22" aria-label="Slide 22"><h1>EspINA</h1>
 <div class="media" style="--x: 224.69px; --y: 187.30px; --w: 509.15px; --h: 509.15px; --z: 3">
 <p><video controls preload="none" playsinline poster="assets/images/image38.png" src="assets/videos/slide-21-516877989.mp4" aria-label="cl04_32_33_espina_manipulate_facet"></video></p>
 </div>
 </section>
-<section class="text" data-slide="22" aria-label="Slide 22"><h1>My work during these last year</h1>
+<section class="text" data-slide="23" aria-label="Slide 23"><h1>My work during these last year</h1>
 </section>
-<section class="text" style="background-image: url(&quot;assets/images/image1.png&quot;)" data-slide="23" aria-label="Slide 23"><h1>MMy</h1>
+<section class="text" style="background-image: url(&quot;assets/images/image6.png&quot;)" data-slide="24" aria-label="Slide 24"><h1>MMy</h1>
 </section></main></div>
 <nav id="toolbar" aria-label="Presentation controls">
 <button id="previous" type="button" title="Left arrow">Previous</button>
@@ -557,7 +565,7 @@ media10.mp4</p>
 <script>
 'use strict';
 const slides = Array.from(document.querySelectorAll('#stage section'));
-const notes = ["", "", "Historia:\n\nIngenierías Técnicas de Informática de Sistemas y de Gestión (desde el curso 97-98)\n\nEscuela Técnica Superior de Ingeniería Informática, creada en julio del 2007", "Historia:\n\nIngenierías Técnicas de Informática de Sistemas y de Gestión (desde el curso 97-98)\n\nEscuela Técnica Superior de Ingeniería Informática, creada en julio del 2007", "", "Ingenierías Técnicas de Informática de Sistemas y de Gestión (desde el curso 97-98)\n\nEscuela Técnica Superior de Ingeniería Informática, creada en julio del 2007", "XRay:\nEntorno seguro para el entrenamiento técnicos en radiología evitando riesgos de exposición a radiación\nPermite simular el procedimiento completo. Posicionamiento de paciente y configuración de la máquina\nPermite incluir distintos modelos de paciente de forma sencilla.\nColaboración con hospitales de UK y la universidad de Bangor", "Simulated X-Ray Image Enhancing \nLas técnicas de Montecarlo permiten simular de forma precisa cómo los fotones interactúan con los distintos materiales de la escena \nProblema: obtener buenos tiene un coste computacional elevado.\nLa imagen de arriba a la izquierda se ha simulado utilizando 10^9 fotones en unas 70 horas (en un servidor con capacidad para ejecutar 20 hilos en paralelo!), la imagen del centro se simula en menos de un segundo, en un PC de sobremesa. \nProblema: Al simularse de forma determinista solo se tiene en cuenta la energía que absorben los tejidos, no el scatering. \nPretendemos usar DL para añadir efectos de scattering en la imagen final.", "", "MelVin: https://vg-lab.es/melvin/\nEs un Metaframework WEB para el desarrollo de aplicaciones de visualización, especialmente útil en tareas de prototipado rápido y análisis exploratorio interactivo.\nHa sido diseñado para integrar visualizaciones y procesos de análisis de datos, desarrollados con distintas tecnologías, dotándolos de mecanismos de interoperabilidad\nPensado para extenderse y adaptarse a distintas áreas de investigación. \nEl proceso de análisis de datos puede definirse de forma simple mediante diagramas de flujo\nA diferencia de la mayoría de las aplicaciones de minería de datos basadas en diagramas de flujo, MeLVin permite a los usuarios incluir visualizaciones y las interacciones entre estas como parte del proceso de análisis y no sólo como una herramienta para mostrar los resultados finales", "MelVin: https://vg-lab.es/melvin/\nEs un Metaframework WEB para el desarrollo de aplicaciones de visualización, especialmente útil en tareas de prototipado rápido y análisis exploratorio interactivo.\nHa sido diseñado para integrar visualizaciones y procesos de análisis de datos, desarrollados con distintas tecnologías, dotándolos de mecanismos de interoperabilidad\nPensado para extenderse y adaptarse a distintas áreas de investigación. \nEl proceso de análisis de datos puede definirse de forma simple mediante diagramas de flujo\nA diferencia de la mayoría de las aplicaciones de minería de datos basadas en diagramas de flujo, MeLVin permite a los usuarios incluir visualizaciones y las interacciones entre estas como parte del proceso de análisis y no sólo como una herramienta para mostrar los resultados finales", "", "Problemas:\nLos dataset científicos suelen ser escasos y débilmente etiquetados. \nProponemos:\nAlgoritmos automáticos para mejorar la calidad de los datos de entrenamiento\nTécnicas que reducen los problemas de “overfiting” derivados de la mala calidad de los datos, durante el entrenamiento.\nAlgoritmos de corrección que permiten seguir mejorando el GT.", "In the time remaining, \nI would like to present our work \non the segmentation of dendritic spines \ncapture with confocal microscopy.", "As most of you already know, deep learning-based models have been successfully applied to many segmentation and classification problems.  \n \nHowever, \nin this problem, and in this field,\nthese techniques have to face challenges \nthat hinder their application.  \n \nIn this case:  \nWe have to deal with Image Stacks\nCurrent state of the art models mainly work with 2D images \nAdditionally,\n       processing 3D images require complex models\n \n- [Complex problems require complex models with a high number of parameters ]\nAnd complex models require large datasets for training. \n \nSince segmenting dendritic spines  is hard and time-consuming,\nit is difficult to find datasets large enough to train DL models with guarantees.\n\n- Finally, most of the dataset segmentations are incomplete.\nGenerally, users are interested only in one branch of the stack\nand some parts of the image are unsegemtned.", "[Our proposal to address these challenges ]\nOur proposed solution to address these challenges \n\nis based on three components:  \n \n- A data pre-processing module.  \n- A specific DL model adapted to this problem.  \n- And a postprocessing module that allows the user to correct the model’s errors.", "Our proposed solution to address these challenges is based on three components:  \n \n- A data pre-processing module.  \n- A specific DL model adapted to this problem.  \n- And a postprocessing module that allows the user to correct the model’s errors.", "Our proposed solution to address these challenges is based on three components:  \n \n- A data pre-processing module.  \n- A specific DL model \nadapted to this problem.  \n- And a postprocessing module that allows the user to correct the model’s errors.", "Our proposed solution to address these challenges is based on three components:  \n \n- A data pre-processing module.  \n- A specific DL model adapted to this specific problem.  \n- And a postprocessing  module that allows the user to correct the model’s errors.", "The preprocessing module \nprimary goal \nis to create the training set and \n[automatically] reconstruct the necks \nof disconnected spines.", "", "", ""];
+const notes = ["", "", "", "", "", "Ingenierías Técnicas de Informática de Sistemas y de Gestión (desde el curso 97-98)\n\nEscuela Técnica Superior de Ingeniería Informática, creada en julio del 2007", "XRay:\nEntorno seguro para el entrenamiento técnicos en radiología evitando riesgos de exposición a radiación\nPermite simular el procedimiento completo. Posicionamiento de paciente y configuración de la máquina\nPermite incluir distintos modelos de paciente de forma sencilla.\nColaboración con hospitales de UK y la universidad de Bangor", "Simulated X-Ray Image Enhancing \nLas técnicas de Montecarlo permiten simular de forma precisa cómo los fotones interactúan con los distintos materiales de la escena \nProblema: obtener buenos tiene un coste computacional elevado.\nLa imagen de arriba a la izquierda se ha simulado utilizando 10^9 fotones en unas 70 horas (en un servidor con capacidad para ejecutar 20 hilos en paralelo!), la imagen del centro se simula en menos de un segundo, en un PC de sobremesa. \nProblema: Al simularse de forma determinista solo se tiene en cuenta la energía que absorben los tejidos, no el scatering. \nPretendemos usar DL para añadir efectos de scattering en la imagen final.", "", "", "MelVin: https://vg-lab.es/melvin/\nEs un Metaframework WEB para el desarrollo de aplicaciones de visualización, especialmente útil en tareas de prototipado rápido y análisis exploratorio interactivo.\nHa sido diseñado para integrar visualizaciones y procesos de análisis de datos, desarrollados con distintas tecnologías, dotándolos de mecanismos de interoperabilidad\nPensado para extenderse y adaptarse a distintas áreas de investigación. \nEl proceso de análisis de datos puede definirse de forma simple mediante diagramas de flujo\nA diferencia de la mayoría de las aplicaciones de minería de datos basadas en diagramas de flujo, MeLVin permite a los usuarios incluir visualizaciones y las interacciones entre estas como parte del proceso de análisis y no sólo como una herramienta para mostrar los resultados finales", "MelVin: https://vg-lab.es/melvin/\nEs un Metaframework WEB para el desarrollo de aplicaciones de visualización, especialmente útil en tareas de prototipado rápido y análisis exploratorio interactivo.\nHa sido diseñado para integrar visualizaciones y procesos de análisis de datos, desarrollados con distintas tecnologías, dotándolos de mecanismos de interoperabilidad\nPensado para extenderse y adaptarse a distintas áreas de investigación. \nEl proceso de análisis de datos puede definirse de forma simple mediante diagramas de flujo\nA diferencia de la mayoría de las aplicaciones de minería de datos basadas en diagramas de flujo, MeLVin permite a los usuarios incluir visualizaciones y las interacciones entre estas como parte del proceso de análisis y no sólo como una herramienta para mostrar los resultados finales", "", "Problemas:\nLos dataset científicos suelen ser escasos y débilmente etiquetados. \nProponemos:\nAlgoritmos automáticos para mejorar la calidad de los datos de entrenamiento\nTécnicas que reducen los problemas de “overfiting” derivados de la mala calidad de los datos, durante el entrenamiento.\nAlgoritmos de corrección que permiten seguir mejorando el GT.", "In the time remaining, \nI would like to present our work \non the segmentation of dendritic spines \ncapture with confocal microscopy.", "As most of you already know, deep learning-based models have been successfully applied to many segmentation and classification problems.  \n \nHowever, \nin this problem, and in this field,\nthese techniques have to face challenges \nthat hinder their application.  \n \nIn this case:  \nWe have to deal with Image Stacks\nCurrent state of the art models mainly work with 2D images \nAdditionally,\n       processing 3D images require complex models\n \n- [Complex problems require complex models with a high number of parameters ]\nAnd complex models require large datasets for training. \n \nSince segmenting dendritic spines  is hard and time-consuming,\nit is difficult to find datasets large enough to train DL models with guarantees.\n\n- Finally, most of the dataset segmentations are incomplete.\nGenerally, users are interested only in one branch of the stack\nand some parts of the image are unsegemtned.", "[Our proposal to address these challenges ]\nOur proposed solution to address these challenges \n\nis based on three components:  \n \n- A data pre-processing module.  \n- A specific DL model adapted to this problem.  \n- And a postprocessing module that allows the user to correct the model’s errors.", "Our proposed solution to address these challenges is based on three components:  \n \n- A data pre-processing module.  \n- A specific DL model adapted to this problem.  \n- And a postprocessing module that allows the user to correct the model’s errors.", "Our proposed solution to address these challenges is based on three components:  \n \n- A data pre-processing module.  \n- A specific DL model \nadapted to this problem.  \n- And a postprocessing module that allows the user to correct the model’s errors.", "Our proposed solution to address these challenges is based on three components:  \n \n- A data pre-processing module.  \n- A specific DL model adapted to this specific problem.  \n- And a postprocessing  module that allows the user to correct the model’s errors.", "The preprocessing module \nprimary goal \nis to create the training set and \n[automatically] reconstruct the necks \nof disconnected spines.", "", "", ""];
 let currentSlide = Math.max(0, Math.min(slides.length - 1, (Number(location.hash.slice(1)) || 1) - 1));
 function fitStage() {
   const scale = Math.min(window.innerWidth / 960, (window.innerHeight - 48) / 720);

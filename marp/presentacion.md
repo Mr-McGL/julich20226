@@ -9,7 +9,7 @@ author: 'Marcos García Lorenzo'
 
 <!-- _class: cover -->
 
-# Inside VG-LAB: Some of Work Lines
+# Inside VG-LAB: <br>*Some of Work Lines*
 
 *Marcos García Lorenzo*
 marcos.garcía@urjc.es
@@ -20,38 +20,28 @@ marcos.garcía@urjc.es
 
 # URJC
 
-URJC stands for Universidad Rey Juan Carlos
-
-Fundada en 1996
-
-6ª Universidad Pública de la CAM
-
-5 Campus: Madrid, Móstoles, Alcorcón, Fuenlabrada y Aranjuez
-
-Más de 40.000 alumnos
-
-2ª Universidad de la CAM y 7ª de España en número de alumnos
+* URJC stands for Universidad Rey Juan Carlos
+* Fundada en 1996
+* 6ª Universidad Pública de la CAM
+* 5 Campus: Madrid, Móstoles, Alcorcón, Fuenlabrada y Aranjuez
+* Más de 40.000 alumnos
+* 2ª Universidad de la CAM y 7ª de España en número de alumnos
 
 ![Imagen 4](assets/images/image5.png)
 
 ---
 
 <!-- _class: split -->
-<!-- _backgroundImage: url("assets/images/image6.png") -->
 
 # ETSII
 
 <div class="box" style="--x: 132.24px; --y: 309px; --w: 367.77px; --h: 268.83px; --z: 4; --fill: white">
 
-Around 200 faculty members.
-
-8 simple degrees
-
-9 double degrees
-
-6 Master Degree
-
-1Phd Program in IT
+* Around 200 faculty members.
+* 8 simple degrees
+* 9 double degrees
+* 6 Master Degree
+* 1 Phd Program in IT
 
 </div>
 
@@ -80,11 +70,7 @@ MÓSTOLES
 </div>
 
 <!--
-Historia:
 
-Ingenierías Técnicas de Informática de Sistemas y de Gestión (desde el curso 97-98)
-
-Escuela Técnica Superior de Ingeniería Informática, creada en julio del 2007
 -->
 
 ---
@@ -106,11 +92,7 @@ Escuela Técnica Superior de Ingeniería Informática, creada en julio del 2007
 </div>
 
 <!--
-Historia:
 
-Ingenierías Técnicas de Informática de Sistemas y de Gestión (desde el curso 97-98)
-
-Escuela Técnica Superior de Ingeniería Informática, creada en julio del 2007
 -->
 
 ---
@@ -121,15 +103,13 @@ Escuela Técnica Superior de Ingeniería Informática, creada en julio del 2007
 
 **Primeras lineas de trabajo:**
 
-**Computer graphics:** Virtual reality, haptic interaction, medical trainers, simulation, rendering
-
-**High-performance computing:** Distributed computing, GPGPU, load balancing
+* **Computer graphics:** Virtual reality, haptic interaction, medical trainers, simulation, rendering
+* **High-performance computing:** Distributed computing, GPGPU, load balancing
 
 **Lineas actuales:**
 
-**Visualization:** scientific visualization, information visualization and exploratory analysis
-
-**Machine leaning and Deep learning**
+* **Visualization:** scientific visualization, information visualization and exploratory analysis
+* **Machine leaning and Deep learning**
 
 ---
 
@@ -173,9 +153,9 @@ Escuela Técnica Superior de Ingeniería Informática, creada en julio del 2007
 
 <!-- _class: sidebar -->
 
-# Projectional Radiography Simulator
+# Computer Graphics and Medical Simulation 
 
-An interactive learning environment for diagnostic radiography that enables educators to bridge the disconnects between theory and practice
+***Projectional Radiography Simulator***: An interactive learning environment for diagnostic radiography that enables educators to bridge the disconnects between theory and practice
 
 [https://vg-lab.es/xraysim/](https://vg-lab.es/xraysim/)
 
@@ -245,19 +225,30 @@ Pretendemos usar DL para añadir efectos de scattering en la imagen final.
 # VG-Lab in HPB
 
 **Ramp-Up**  
-T7.3.2 – Neuroscience-specific visualization
+> T7.3.2 – Neuroscience-specific visualization
 
 **SGA1**  
-T1.4.2 – Visual analysis tools for microanatomical data  
-T7.3.2 – Neuroscience-specific visualization
+>T1.4.2 – Visual analysis tools for microanatomical data  
+>T7.3.2 – Neuroscience-specific visualization
 
 **SGA2**  
-T1.4.4 – Towards an integrated framework for the acquisition and early analysis of microanatomical data  
-T7.3.8 – In-situ visual analysis of simulation data  
-T7.3.9 – Low-level visualisation backend
+>T1.4.4 – Towards an integrated framework for the acquisition and early analysis of microanatomical data  
+>T7.3.8 – In-situ visual analysis of simulation data  
+>T7.3.9 – Low-level visualisation backend
 
 **SGA3**  
-T5.7 – Visualisation framework (SC3)
+> T5.7 – Visualisation framework (SC3)
+
+---
+
+<!-- _class: text -->
+
+# VG-Lab in EBRAIN
+
+**Virtual Brain Twin Project (HORIZON-HLTH-2023-TOOL-05-03)**  
+> Developing an Integrative Workflows GUI
+
+
 
 ---
 
@@ -265,16 +256,6 @@ T5.7 – Visualisation framework (SC3)
 
 # Visualization ecosystem
 
-<div class="command">
-
-ffmpeg -i media10.avi \\  
--map 0:v:0 -map 0:a? \\  
--c:v libx264 -crf 18 -preset medium \\  
--c:a aac -b:a 192k \\  
--movflags +faststart \\  
-media10.mp4
-
-</div>
 
 <div class="media" style="--x: 155.78px; --y: 172.00px; --w: 675.26px; --h: 505.61px; --z: 3">
 
@@ -310,16 +291,6 @@ A graphical meta-framework for prototyping data visualization and exploratory an
 
 ![Picture 4](assets/images/image25.png)
 
-<div class="command">
-
-ffmpeg -i media10.avi \\  
--map 0:v:0 -map 0:a? \\  
--c:v libx264 -crf 18 -preset medium \\  
--c:a aac -b:a 192k \\  
--movflags +faststart \\  
-media10.mp4
-
-</div>
 
 <!--
 MelVin: https://vg-lab.es/melvin/
@@ -677,6 +648,6 @@ of disconnected spines.
 ---
 
 <!-- _class: text -->
-<!-- _backgroundImage: url("assets/images/image1.png") -->
+<!-- _backgroundImage: url("assets/images/image6.png") -->
 
 # MMy

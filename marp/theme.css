@@ -65,9 +65,9 @@ section > p:not(:has(> img, > video)), section > ul, section > ol {
   overflow-wrap: break-word;
 }
 
-/* Original page labels automatically select the shared footer background. */
+/* Original page labels retain their title and footer positioning. */
 section:has(> footer) {
-  background-image: url("assets/images/image1.png");
+  background-image: url("assets/images/image6.png");
   --title-left: 66px;
   --title-top: 71.08px;
   --title-width: 828px;
@@ -99,11 +99,12 @@ section.cover {
   padding: 86.86px 6.97px 150.19px 9.20px;
   color: white;
   text-align: center;
-  background-image: url("assets/images/image4.png"),
-                    url("assets/images/image2.jpg"),
-                    url("assets/images/image1.png");
-  background-position: 1016.88px 569.23px, -93.05px -0.41px, center;
-  background-size: 113.84px 113.84px, 1233.29px 719.69px, cover;
+  background-color: #242424;
+  background-image: url("assets/images/image3.png"),
+                    url("assets/images/image4.png"),
+                    url("assets/images/image2.jpg");
+  background-position: 25px 607px, right 25px bottom 25px, center top;
+  background-size: 432.31px 93.75px, 113.84px 113.84px, contain;
   background-repeat: no-repeat;
 }
 section.cover > h1 {
@@ -121,21 +122,7 @@ section.cover > h1 {
 section.cover > p { z-index: 4; margin: 0 0 8px; }
 section.cover > p:last-child { margin-bottom: 0; }
 section.cover::before, section.cover::after {
-  content: "";
-  position: absolute;
-  display: block;
-  height: 93.75px;
-  background-image: url("assets/images/image3.png");
-  background-repeat: no-repeat;
-  background-size: 432.31px 93.75px;
-  z-index: 5;
-}
-section.cover::before { left: 25px; top: 607.13px; width: 167.71px; }
-section.cover::after {
-  left: 198.88px;
-  top: 600.86px;
-  width: 281.11px;
-  background-position: -151.20px 0;
+  display: none;
 }
 
 /* 2. Text: ordinary Markdown flows across the full body width. */
@@ -150,7 +137,7 @@ section.split {
   --title-top: 19.80px;
   --title-width: 828px;
   --title-height: 139.16px;
-  background-image: url("assets/images/image1.png");
+  background-image: url("assets/images/image6.png");
 }
 section.split > :is(p:has(> img, > video), video) {
   left: 482.27px;
