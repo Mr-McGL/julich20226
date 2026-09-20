@@ -1,0 +1,280 @@
+/*
+ * @theme vg-lab
+ * @size 4:3 960px 720px
+ *
+ * Five reusable layouts: cover, text, split, sidebar, figure.
+ * Local coordinates are allowed only on exceptional objects in Markdown.
+ * Keep this file beside presentacion.md so relative asset URLs remain valid.
+ */
+@import 'default';
+
+/* Shared background, typography and title. */
+section {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  width: 960px;
+  height: 720px;
+  padding: calc(var(--body-top) + 8px)
+           calc(960px - var(--body-left) - var(--body-width) + 10px)
+           0 calc(var(--body-left) + 10px);
+  overflow: hidden;
+  background: white url("assets/images/image6.png") center / cover no-repeat;
+  --title-left: 48px;
+  --title-top: 27.36px;
+  --title-width: 864px;
+  --title-height: 120px;
+  --body-left: 48px;
+  --body-top: 184px;
+  --body-width: 864.71px;
+  --body-size: 22px;
+  --body-leading: 1.22;
+  --paragraph-gap: 0.55em;
+  color: black;
+  font-size: 22px;
+  line-height: 1.22;
+}
+section * { box-sizing: border-box; }
+section h1, section h2, section p { margin: 0; padding: 0; }
+section h1 { font-size: 38px; line-height: 1.12; color: inherit; }
+section h2 { font-size: 26px; line-height: 1.2; color: inherit; }
+section a { color: inherit; }
+section::after { display: none; }
+section::before, section::after { box-sizing: border-box; pointer-events: none; }
+section > h1 {
+  position: absolute;
+  left: var(--title-left);
+  top: var(--title-top);
+  width: var(--title-width);
+  height: var(--title-height);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  text-align: center;
+  color: white;
+  overflow-wrap: break-word;
+}
+section > p:not(:has(> img, > video)), section > ul, section > ol {
+  position: relative;
+  z-index: 10;
+  margin-bottom: var(--paragraph-gap);
+  font-size: var(--body-size);
+  line-height: var(--body-leading);
+  overflow-wrap: break-word;
+}
+
+/* Original page labels automatically select the shared footer background. */
+section:has(> footer) {
+  background-image: url("assets/images/image1.png");
+  --title-left: 66px;
+  --title-top: 71.08px;
+  --title-width: 828px;
+  --title-height: 73.67px;
+}
+section > footer {
+  position: absolute;
+  top: 667.33px;
+  left: 678px;
+  right: auto;
+  bottom: auto;
+  width: 216px;
+  height: 38.33px;
+  z-index: 20;
+  margin: 0;
+  padding: 3px;
+  color: inherit;
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* 1. Cover: all photographs and logos belong to the theme. */
+section.cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 86.86px 6.97px 150.19px 9.20px;
+  color: white;
+  text-align: center;
+  background-image: url("assets/images/image4.png"),
+                    url("assets/images/image2.jpg"),
+                    url("assets/images/image1.png");
+  background-position: 1016.88px 569.23px, -93.05px -0.41px, center;
+  background-size: 113.84px 113.84px, 1233.29px 719.69px, cover;
+  background-repeat: no-repeat;
+}
+section.cover > h1 {
+  position: relative;
+  display: block;
+  left: auto;
+  top: auto;
+  width: auto;
+  height: auto;
+  z-index: 4;
+  margin: 0 0 54px;
+  padding: 0;
+  font-size: 54px;
+}
+section.cover > p { z-index: 4; margin: 0 0 8px; }
+section.cover > p:last-child { margin-bottom: 0; }
+section.cover::before, section.cover::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 93.75px;
+  background-image: url("assets/images/image3.png");
+  background-repeat: no-repeat;
+  background-size: 432.31px 93.75px;
+  z-index: 5;
+}
+section.cover::before { left: 25px; top: 607.13px; width: 167.71px; }
+section.cover::after {
+  left: 198.88px;
+  top: 600.86px;
+  width: 281.11px;
+  background-position: -151.20px 0;
+}
+
+/* 2. Text: ordinary Markdown flows across the full body width. */
+section.text { --body-left: 48px; --body-top: 184px; --body-width: 864.71px; }
+
+/* 3. Split: ordinary text on the left and one image on the right. */
+section.split {
+  --body-left: 30.97px;
+  --body-top: 239.04px;
+  --body-width: 390.43px;
+  --title-left: 66px;
+  --title-top: 19.80px;
+  --title-width: 828px;
+  --title-height: 139.16px;
+  background-image: url("assets/images/image1.png");
+}
+section.split > :is(p:has(> img, > video), video) {
+  left: 482.27px;
+  top: 186.12px;
+  width: 447.84px;
+  height: 405.35px;
+  background: #f2f2f2;
+  outline: 2.66px solid black;
+  outline-offset: -1.33px;
+}
+
+/* 4. Sidebar: ordinary text plus a shared 2-by-2 media grid.
+ * Media order is top-left, top-right, bottom-left, bottom-right.
+ */
+section.sidebar {
+  --body-left: 35.78px;
+  --body-top: 185.56px;
+  --body-width: 194.45px;
+  --body-size: 19px;
+}
+section.sidebar::before {
+  content: "";
+  position: absolute;
+  left: 320.66px;
+  top: 164.99px;
+  width: 627.24px;
+  height: 548px;
+  z-index: 2;
+  background: white;
+  box-shadow: 0 5.33px 5.33px 5.56px rgba(0,0,0,0.4314);
+}
+section.sidebar > :is(p:has(> img, > video), video) {
+  left: 331px;
+  top: 202px;
+  width: 302px;
+  height: 227px;
+}
+section.sidebar > :nth-child(2n of p:has(> img, > video), video) { left: 638px; }
+section.sidebar > :nth-child(n+3 of p:has(> img, > video), video) { top: 466px; }
+
+/* 5. Figure: a centered illustration; local divs handle unusual collages. */
+section.figure > :is(p:has(> img, > video), video) {
+  left: 292.19px;
+  top: 146px;
+  width: 423.46px;
+  height: 487.05px;
+}
+
+/* Native Markdown media, shared by all regular layouts. */
+section > p:has(> img, > video), section > video {
+  position: absolute;
+  display: block;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+section > p:has(> img, > video) > :is(img, video), section > video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+}
+section.split > p:has(> img) > img, section.figure > p:has(> img) > img { object-fit: fill; }
+
+/* Exceptional objects: only geometry stays in the Markdown.
+ * These components never identify a slide number, title or image filename.
+ */
+section .media, section .box, section .caption, section .callout,
+section .command, section .panel, section .arrow {
+  position: absolute;
+  left: var(--x, 0px);
+  top: var(--y, 0px);
+  width: var(--w, auto);
+  height: var(--h, auto);
+  z-index: var(--z, 4);
+  margin: 0;
+  padding: 0;
+  background: var(--fill, transparent);
+  outline: var(--outline, none);
+  outline-offset: var(--outline-offset, 0px);
+  box-shadow: var(--shadow, none);
+}
+section .media { overflow: hidden; }
+section .media > p { margin: 0; padding: 0; width: 100%; height: 100%; }
+section .media img, section .media video {
+  position: absolute;
+  display: block;
+  left: var(--image-left, 0%);
+  top: var(--image-top, 0%);
+  width: var(--image-width, 100%);
+  height: var(--image-height, 100%);
+  max-width: none;
+  max-height: none;
+  object-fit: fill;
+}
+section .box, section .caption, section .callout, section .command {
+  padding: 8px 10px;
+  overflow-wrap: break-word;
+}
+section .box p, section .caption p, section .callout p, section .command p {
+  margin-bottom: 0.55em;
+}
+section .box p:last-child, section .caption p:last-child,
+section .callout p:last-child, section .command p:last-child { margin-bottom: 0; }
+section .caption { text-align: center; font-size: 20px; }
+section .callout, section .box-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+section .callout { color: white; font-size: 22px; background: rgba(0,0,0,0.5); }
+section .box-title h1 { font-size: 38px; line-height: 1.12; }
+section .compact { font-size: 16px; line-height: 1.16; }
+section .compact p { margin-bottom: 0.4em; }
+section .arrow { clip-path: polygon(0 25%,50% 25%,50% 0,100% 50%,50% 100%,50% 75%,0 75%); }
+section .command {
+  left: 287.35px;
+  top: 268.80px;
+  width: 385.30px;
+  height: 182.40px;
+  z-index: 12;
+  font-size: 18px;
+}

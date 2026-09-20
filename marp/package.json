@@ -1,0 +1,14 @@
+{
+  "name": "vg-lab-marp",
+  "version": "3.0.0",
+  "private": true,
+  "scripts": {
+    "html": "marp --config marp.config.json presentacion.md -o presentacion.html",
+    "pdf": "marp --config marp.config.json presentacion.md --pdf --allow-local-files -o presentacion.pdf",
+    "preview": "marp --config marp.config.json --server .",
+    "watch": "marp --config marp.config.json --watch presentacion.md -o presentacion.html"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "4.5.1"
+  }
+}

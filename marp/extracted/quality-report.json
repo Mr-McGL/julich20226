@@ -1,0 +1,24 @@
+{
+  "source_sha256": "7fd8452f52ff986436392ff50935f96ba75d7c8f911bf863b95219001965fde0",
+  "markdown_slide_count": 23,
+  "expected_slide_count": 23,
+  "text_objects_checked": 52,
+  "text_errors": [],
+  "notes_mismatches": [],
+  "local_asset_errors": [],
+  "media_files_checked": 38,
+  "byte_identity_errors": [],
+  "commonmark_html_structure_errors": [],
+  "chromium_preview": {
+    "slides_rendered": 23,
+    "broken_images": 0,
+    "javascript_errors": 0
+  },
+  "review_comments_found": 0,
+  "speaker_notes_nonempty_slides": 15,
+  "missing_video_objects": 5,
+  "embedded_videos_extracted": 0,
+  "marp_cli_validation": "Not run: Marp CLI was not available in this environment.",
+  "visual_reference": "LibreOffice render; font substitutions and recalculated slide-number fields apply.",
+  "source_irregularities_preserved": true
+}

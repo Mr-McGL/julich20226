@@ -1,0 +1,6 @@
+{
+  "html": true,
+  "themeSet": [
+    "./theme.css"
+  ]
+}

@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inside VG-LAB: My Role and Some of Work Lines — Offline preview</title>
+<style>
+html,body { margin:0; width:100%; height:100%; overflow:hidden; background:#202124; }
+body { font-family:Arial,sans-serif; }
+#viewport { position:absolute; inset:0 0 48px; display:flex; justify-content:center; align-items:center; }
+#stage { position:relative; width:960px; height:720px; flex-shrink:0; transform-origin:center; }
+#stage section { position:absolute; inset:0; visibility:hidden; }
+#stage section.active { visibility:visible; }
+#toolbar { position:absolute; left:0; right:0; bottom:0; height:48px; display:flex; align-items:center; justify-content:center; gap:14px; color:#fff; background:#111; font-size:14px; }
+button { color:#eee; border:1px solid #666; background:#303134; border-radius:4px; padding:5px 11px; cursor:pointer; font:inherit; }
+#notes { display:none; position:absolute; right:16px; bottom:60px; width:min(520px,80vw); max-height:55vh; overflow:auto; box-sizing:border-box; padding:22px; color:#eee; background:rgba(24,24,24,.97); border:1px solid #666; border-radius:8px; white-space:pre-wrap; font-size:16px; line-height:1.5; }
+#notes.visible { display:block; }
+@media print { html,body {overflow:visible;background:#fff;height:auto;} #viewport {position:static;display:block;} #stage {width:960px;height:auto;transform:none !important;} #stage section {position:relative;visibility:visible;page-break-after:always;} #toolbar,#notes {display:none;} @page {size:10in 7.5in;margin:0;} }
+/*
+ * @theme vg-lab
+ * @size 4:3 960px 720px
+ *
+ * Five reusable layouts: cover, text, split, sidebar, figure.
+ * Local coordinates are allowed only on exceptional objects in Markdown.
+ * Keep this file beside presentacion.md so relative asset URLs remain valid.
+ */
+
+
+/* Shared background, typography and title. */
+section {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  width: 960px;
+  height: 720px;
+  padding: calc(var(--body-top) + 8px)
+           calc(960px - var(--body-left) - var(--body-width) + 10px)
+           0 calc(var(--body-left) + 10px);
+  overflow: hidden;
+  background: white url("assets/images/image6.png") center / cover no-repeat;
+  --title-left: 48px;
+  --title-top: 27.36px;
+  --title-width: 864px;
+  --title-height: 120px;
+  --body-left: 48px;
+  --body-top: 184px;
+  --body-width: 864.71px;
+  --body-size: 22px;
+  --body-leading: 1.22;
+  --paragraph-gap: 0.55em;
+  color: black;
+  font-size: 22px;
+  line-height: 1.22;
+}
+section * { box-sizing: border-box; }
+section h1, section h2, section p { margin: 0; padding: 0; }
+section h1 { font-size: 38px; line-height: 1.12; color: inherit; }
+section h2 { font-size: 26px; line-height: 1.2; color: inherit; }
+section a { color: inherit; }
+section::after { display: none; }
+section::before, section::after { box-sizing: border-box; pointer-events: none; }
+section > h1 {
+  position: absolute;
+  left: var(--title-left);
+  top: var(--title-top);
+  width: var(--title-width);
+  height: var(--title-height);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  text-align: center;
+  color: white;
+  overflow-wrap: break-word;
+}
+section > p:not(:has(> img, > video)), section > ul, section > ol {
+  position: relative;
+  z-index: 10;
+  margin-bottom: var(--paragraph-gap);
+  font-size: var(--body-size);
+  line-height: var(--body-leading);
+  overflow-wrap: break-word;
+}
+
+/* Original page labels automatically select the shared footer background. */
+section:has(> footer) {
+  background-image: url("assets/images/image1.png");
+  --title-left: 66px;
+  --title-top: 71.08px;
+  --title-width: 828px;
+  --title-height: 73.67px;
+}
+section > footer {
+  position: absolute;
+  top: 667.33px;
+  left: 678px;
+  right: auto;
+  bottom: auto;
+  width: 216px;
+  height: 38.33px;
+  z-index: 20;
+  margin: 0;
+  padding: 3px;
+  color: inherit;
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* 1. Cover: all photographs and logos belong to the theme. */
+section.cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 86.86px 6.97px 150.19px 9.20px;
+  color: white;
+  text-align: center;
+  background-image: url("assets/images/image4.png"),
+                    url("assets/images/image2.jpg"),
+                    url("assets/images/image1.png");
+  background-position: 1016.88px 569.23px, -93.05px -0.41px, center;
+  background-size: 113.84px 113.84px, 1233.29px 719.69px, cover;
+  background-repeat: no-repeat;
+}
+section.cover > h1 {
+  position: relative;
+  display: block;
+  left: auto;
+  top: auto;
+  width: auto;
+  height: auto;
+  z-index: 4;
+  margin: 0 0 54px;
+  padding: 0;
+  font-size: 54px;
+}
+section.cover > p { z-index: 4; margin: 0 0 8px; }
+section.cover > p:last-child { margin-bottom: 0; }
+section.cover::before, section.cover::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 93.75px;
+  background-image: url("assets/images/image3.png");
+  background-repeat: no-repeat;
+  background-size: 432.31px 93.75px;
+  z-index: 5;
+}
+section.cover::before { left: 25px; top: 607.13px; width: 167.71px; }
+section.cover::after {
+  left: 198.88px;
+  top: 600.86px;
+  width: 281.11px;
+  background-position: -151.20px 0;
+}
+
+/* 2. Text: ordinary Markdown flows across the full body width. */
+section.text { --body-left: 48px; --body-top: 184px; --body-width: 864.71px; }
+
+/* 3. Split: ordinary text on the left and one image on the right. */
+section.split {
+  --body-left: 30.97px;
+  --body-top: 239.04px;
+  --body-width: 390.43px;
+  --title-left: 66px;
+  --title-top: 19.80px;
+  --title-width: 828px;
+  --title-height: 139.16px;
+  background-image: url("assets/images/image1.png");
+}
+section.split > :is(p:has(> img, > video), video) {
+  left: 482.27px;
+  top: 186.12px;
+  width: 447.84px;
+  height: 405.35px;
+  background: #f2f2f2;
+  outline: 2.66px solid black;
+  outline-offset: -1.33px;
+}
+
+/* 4. Sidebar: ordinary text plus a shared 2-by-2 media grid.
+ * Media order is top-left, top-right, bottom-left, bottom-right.
+ */
+section.sidebar {
+  --body-left: 35.78px;
+  --body-top: 185.56px;
+  --body-width: 194.45px;
+  --body-size: 19px;
+}
+section.sidebar::before {
+  content: "";
+  position: absolute;
+  left: 320.66px;
+  top: 164.99px;
+  width: 627.24px;
+  height: 548px;
+  z-index: 2;
+  background: white;
+  box-shadow: 0 5.33px 5.33px 5.56px rgba(0,0,0,0.4314);
+}
+section.sidebar > :is(p:has(> img, > video), video) {
+  left: 331px;
+  top: 202px;
+  width: 302px;
+  height: 227px;
+}
+section.sidebar > :nth-child(2n of p:has(> img, > video), video) { left: 638px; }
+section.sidebar > :nth-child(n+3 of p:has(> img, > video), video) { top: 466px; }
+
+/* 5. Figure: a centered illustration; local divs handle unusual collages. */
+section.figure > :is(p:has(> img, > video), video) {
+  left: 292.19px;
+  top: 146px;
+  width: 423.46px;
+  height: 487.05px;
+}
+
+/* Native Markdown media, shared by all regular layouts. */
+section > p:has(> img, > video), section > video {
+  position: absolute;
+  display: block;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+section > p:has(> img, > video) > :is(img, video), section > video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+}
+section.split > p:has(> img) > img, section.figure > p:has(> img) > img { object-fit: fill; }
+
+/* Exceptional objects: only geometry stays in the Markdown.
+ * These components never identify a slide number, title or image filename.
+ */
+section .media, section .box, section .caption, section .callout,
+section .command, section .panel, section .arrow {
+  position: absolute;
+  left: var(--x, 0px);
+  top: var(--y, 0px);
+  width: var(--w, auto);
+  height: var(--h, auto);
+  z-index: var(--z, 4);
+  margin: 0;
+  padding: 0;
+  background: var(--fill, transparent);
+  outline: var(--outline, none);
+  outline-offset: var(--outline-offset, 0px);
+  box-shadow: var(--shadow, none);
+}
+section .media { overflow: hidden; }
+section .media > p { margin: 0; padding: 0; width: 100%; height: 100%; }
+section .media img, section .media video {
+  position: absolute;
+  display: block;
+  left: var(--image-left, 0%);
+  top: var(--image-top, 0%);
+  width: var(--image-width, 100%);
+  height: var(--image-height, 100%);
+  max-width: none;
+  max-height: none;
+  object-fit: fill;
+}
+section .box, section .caption, section .callout, section .command {
+  padding: 8px 10px;
+  overflow-wrap: break-word;
+}
+section .box p, section .caption p, section .callout p, section .command p {
+  margin-bottom: 0.55em;
+}
+section .box p:last-child, section .caption p:last-child,
+section .callout p:last-child, section .command p:last-child { margin-bottom: 0; }
+section .caption { text-align: center; font-size: 20px; }
+section .callout, section .box-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+section .callout { color: white; font-size: 22px; background: rgba(0,0,0,0.5); }
+section .box-title h1 { font-size: 38px; line-height: 1.12; }
+section .compact { font-size: 16px; line-height: 1.16; }
+section .compact p { margin-bottom: 0.4em; }
+section .arrow { clip-path: polygon(0 25%,50% 25%,50% 0,100% 50%,50% 100%,50% 75%,0 75%); }
+section .command {
+  left: 287.35px;
+  top: 268.80px;
+  width: 385.30px;
+  height: 182.40px;
+  z-index: 12;
+  font-size: 18px;
+}
+
+</style>
+</head>
+<body>
+<div id="viewport"><main id="stage"><section class="cover" data-slide="1" aria-label="Slide 1"><h1>Inside VG-LAB: My Role and Some of Work Lines</h1>
+<p>Marcos García Lorenzo</p>
+<p>marcos.garcía@urjc.es</p>
+</section>
+<section class="split" data-slide="2" aria-label="Slide 2"><h1>URJC</h1>
+<p>URJC stands for Universidad Rey Juan Carlos</p>
+<p>Fundada en 1996</p>
+<p>6ª Universidad Pública de la CAM</p>
+<p>5 Campus: Madrid, Móstoles, Alcorcón, Fuenlabrada y Aranjuez</p>
+<p>Más de 40.000 alumnos</p>
+<p>2ª Universidad de la CAM y 7ª de España en número de alumnos</p>
+<p><img src="assets/images/image5.png" alt="Imagen 4" /></p>
+</section>
+<section class="split" style="background-image: url(&quot;assets/images/image6.png&quot;)" data-slide="3" aria-label="Slide 3"><h1>ETSII</h1>
+<div class="box" style="--x: 132.24px; --y: 309px; --w: 367.77px; --h: 268.83px; --z: 4; --fill: white">
+<p>Around 200 faculty members.</p>
+<p>8 simple degrees</p>
+<p>9 double degrees</p>
+<p>6 Master Degree</p>
+<p>1Phd Program in IT</p>
+</div>
+<div class="media" style="--x: 498.96px; --y: 311.57px; --w: 337.79px; --h: 184.95px; --z: 2; --outline: 2.66px solid rgba(0,0,0,1.0000); --outline-offset: -1.33px">
+<p><img src="assets/images/image7.png" alt="image8.png" /></p>
+</div>
+<div class="media" style="--x: 132.24px; --y: 173.06px; --w: 704.50px; --h: 116.40px; --z: 3; --outline: 2.66px solid rgba(0,0,0,1.0000); --outline-offset: -1.33px; --image-left: -3.02531%; --image-top: -257.36380%; --image-width: 257.25458%; --image-height: 502.13407%">
+<p><img src="assets/images/image8.jpg" alt="Imagen 5" /></p>
+</div>
+<div class="media" style="--x: 508.83px; --y: 525.00px; --w: 282.29px; --h: 176.72px; --z: 5; --outline: 24.00px solid rgba(0,0,0,1.0000); --outline-offset: -12.00px">
+<p><img src="assets/images/image9.jpg" alt="image10.jpeg" /></p>
+</div>
+<div class="caption" style="--x: 708.48px; --y: 660.08px; --w: 152.12px; --h: 41.63px; --z: 6; --fill: rgba(255,255,255,1.0000)">
+<p>MÓSTOLES</p>
+</div>
+</section>
+<section class="figure" data-slide="4" aria-label="Slide 4"><h1>VG-LAB</h1>
+<div class="media" style="--x: 794.69px; --y: 548.07px; --w: 117.30px; --h: 117.30px; --z: 2">
+<p><img src="assets/images/image4.png" alt="image4" /></p>
+</div>
+<div class="media" style="--x: 27.01px; --y: 277.36px; --w: 905.96px; --h: 228.92px; --z: 3">
+<p><img src="assets/images/image10.png" alt="image10" /></p>
+</div>
+</section>
+<section class="text" data-slide="5" aria-label="Slide 5"><h1>VG-LAB</h1>
+<p><strong>Primeras lineas de trabajo:</strong></p>
+<p><strong>Computer graphics:</strong> Virtual reality, haptic interaction, medical trainers, simulation, rendering</p>
+<p><strong>High-performance computing:</strong> Distributed computing, GPGPU, load balancing</p>
+<p><strong>Lineas actuales:</strong></p>
+<p><strong>Visualization:</strong> scientific visualization, information visualization and exploratory analysis</p>
+<p><strong>Machine leaning and Deep learning</strong></p>
+</section>
+<section class="figure" data-slide="6" aria-label="Slide 6"><h1>Computer Graphics and Medical Simulation</h1>
+<div class="media" style="--x: 77.47px; --y: 198.03px; --w: 331.04px; --h: 166.78px; --z: 2">
+<p><img src="assets/images/image11.jpg" alt="image11" /></p>
+</div>
+<div class="media" style="--x: 56.66px; --y: 401.68px; --w: 372.66px; --h: 256.00px; --z: 3">
+<p><img src="assets/images/image12.jpg" alt="Picture 2" /></p>
+</div>
+<div class="media" style="--x: 480.00px; --y: 245.41px; --w: 442.78px; --h: 362.28px; --z: 5">
+<p><img src="assets/images/image13.png" alt="image13" /></p>
+</div>
+<div class="media" style="--x: 569.72px; --y: 266.53px; --w: 171.85px; --h: 158.13px; --z: 6">
+<p><img src="assets/images/image14.jpg" alt="image14" /></p>
+</div>
+</section>
+<section class="sidebar" data-slide="7" aria-label="Slide 7"><h1>Projectional Radiography Simulator</h1>
+<p>An interactive learning environment for diagnostic radiography that enables educators to bridge the disconnects between theory and practice</p>
+<p><a href="https://vg-lab.es/xraysim/">https://vg-lab.es/xraysim/</a></p>
+<p><video controls preload="none" playsinline poster="assets/images/image18.png" src="assets/videos/slide-07-1158545669.mp4" aria-label="videoplayback"></video></p>
+<p><img src="assets/images/image16.png" alt="Picture 4" /></p>
+<p><img src="assets/images/image17.png" alt="Picture 6" /></p>
+<p><img src="assets/images/image15.png" alt="Picture 2" /></p>
+</section>
+<section class="sidebar" data-slide="8" aria-label="Slide 8"><h1>Simulated X-Ray Image Enhancing</h1>
+<p><strong>Deterministic simulation</strong> +<br />
+<strong>Deep Learning</strong><br />
+to mimic computationally expensive high-quality Montecarlo simulations</p>
+<div class="media" style="--x: 349.86px; --y: 199.62px; --w: 576.12px; --h: 246.30px; --z: 4">
+<p><img src="assets/images/image19.png" alt="Imagen 18" /></p>
+</div>
+<div class="media" style="--x: 386.14px; --y: 445.27px; --w: 107.09px; --h: 236.87px; --z: 5">
+<p><img src="assets/images/image20.png" alt="Imagen 20" /></p>
+</div>
+<div class="media" style="--x: 586.98px; --y: 458.48px; --w: 288.09px; --h: 214.66px; --z: 6; --image-left: -31.31065%; --image-top: -35.65964%; --image-width: 169.64104%; --image-height: 170.75920%">
+<p><img src="assets/images/image21.png" alt="Imagen 22" /></p>
+</div>
+</section>
+<section class="text" data-slide="9" aria-label="Slide 9"><h1>VG-Lab in HPB</h1>
+<p><strong>Ramp-Up</strong><br />
+T7.3.2 – Neuroscience-specific visualization</p>
+<p><strong>SGA1</strong><br />
+T1.4.2 – Visual analysis tools for microanatomical data<br />
+T7.3.2 – Neuroscience-specific visualization</p>
+<p><strong>SGA2</strong><br />
+T1.4.4 – Towards an integrated framework for the acquisition and early analysis of microanatomical data<br />
+T7.3.8 – In-situ visual analysis of simulation data<br />
+T7.3.9 – Low-level visualisation backend</p>
+<p><strong>SGA3</strong><br />
+T5.7 – Visualisation framework (SC3)</p>
+</section>
+<section class="figure" data-slide="10" aria-label="Slide 10"><h1>Visualization ecosystem</h1>
+<div class="command">
+<p>ffmpeg -i media10.avi \<br />
+-map 0:v:0 -map 0:a? \<br />
+-c:v libx264 -crf 18 -preset medium \<br />
+-c:a aac -b:a 192k \<br />
+-movflags +faststart \<br />
+media10.mp4</p>
+</div>
+<div class="media" style="--x: 155.78px; --y: 172.00px; --w: 675.26px; --h: 505.61px; --z: 3">
+<p><img src="assets/images/image22.png" alt="Marcador de contenido 4" /></p>
+</div>
+</section>
+<section class="sidebar" data-slide="11" aria-label="Slide 11"><h1>Melvin</h1>
+<p>A graphical meta-framework for prototyping data visualization and exploratory analysis</p>
+<p><video controls preload="none" playsinline poster="assets/images/image26.png" src="assets/videos/slide-11-2066184930.mp4" aria-label="SnapSave.io-MeLVin(360p)"></video></p>
+<p><img src="assets/images/image23.png" alt="Picture 2" /></p>
+<p><img src="assets/images/image24.png" alt="Picture 6" /></p>
+<p><img src="assets/images/image25.png" alt="Picture 4" /></p>
+<div class="command">
+<p>ffmpeg -i media10.avi \<br />
+-map 0:v:0 -map 0:a? \<br />
+-c:v libx264 -crf 18 -preset medium \<br />
+-c:a aac -b:a 192k \<br />
+-movflags +faststart \<br />
+media10.mp4</p>
+</div>
+</section>
+<section class="text" data-slide="12" aria-label="Slide 12"><h1>VG-Lab in HPB</h1>
+<p><strong>Ramp-Up</strong><br />
+T7.3.2 – Neuroscience-specific visualization</p>
+<p><strong>SGA1</strong><br />
+<strong>T1.4.2 – Visual analysis tools for microanatomical data</strong><br />
+T7.3.2 – Neuroscience-specific visualization</p>
+<p><strong>SGA2</strong><br />
+T1.4.4 – <strong>Towards an integrated framework for the acquisition and early analysis of microanatomical data</strong><br />
+T7.3.8 – In-situ visual analysis of simulation data<br />
+T7.3.9 – Low-level visualisation backend</p>
+<p><strong>SGA3</strong><br />
+T5.7 – Visualisation framework (SC3)</p>
+</section>
+<section class="sidebar" data-slide="13" aria-label="Slide 13"><h1>DeepSpineNet</h1>
+<p><strong>Deep Learning-based automatic dendritic spine segmentation +</strong><br />
+user-supervised correction algorithms</p>
+<p><a href="https://vg-lab.es/deepspinenet/">https://vg-lab.es/deepspinenet/</a></p>
+<p><a href="https://gitfront.io/r/user-4306573/be116855b22f779ae17fb981f89fbd138ac27133/DeepSpineNet-GUI/">https://gitfront.io/r/user-4306573/be116855b22f779ae17fb981f89fbd138ac27133/DeepSpineNet-GUI/</a></p>
+<p><video controls preload="none" playsinline poster="assets/images/image28.png" src="assets/videos/slide-13-1419470627.mp4" aria-label="DSNet2"></video></p>
+<p><img src="assets/images/image30.png" alt="Picture 2" /></p>
+<p><video controls preload="none" playsinline poster="assets/images/image29.png" src="assets/videos/slide-13-955489805.mp4" aria-label="DSNet3"></video></p>
+<p><img src="assets/images/image27.png" alt="Picture 4" /></p>
+</section>
+<section class="figure" data-slide="14" aria-label="Slide 14"><h1>Computer Vision and Deep Learning (II)</h1>
+<div class="media" style="--x: 676.81px; --y: 169.01px; --w: 150.67px; --h: 397.52px; --z: 3">
+<p><img src="assets/images/image31.png" alt="Imagen 17" /></p>
+</div>
+<div class="media" style="--x: 311.67px; --y: 169.01px; --w: 150.67px; --h: 397.52px; --z: 5">
+<p><img src="assets/images/image32.png" alt="Imagen 8" /></p>
+</div>
+<div class="media" style="--x: 494.24px; --y: 169.01px; --w: 150.67px; --h: 397.52px; --z: 6">
+<p><img src="assets/images/image33.png" alt="Imagen 13" /></p>
+</div>
+<div class="media" style="--x: 161.23px; --y: 169.01px; --w: 150.67px; --h: 397.52px; --z: 7">
+<p><img src="assets/images/image34.png" alt="Imagen 14" /></p>
+</div>
+<div class="caption" style="--x: 676.81px; --y: 566.67px; --w: 150.43px; --h: 55.75px; --z: 4">
+<p><strong>Instance segmentation</strong></p>
+</div>
+<div class="caption" style="--x: 162.11px; --y: 566.67px; --w: 149.27px; --h: 55.75px; --z: 8">
+<p><strong>RAW image</strong></p>
+</div>
+<div class="caption" style="--x: 312.44px; --y: 566.67px; --w: 149.90px; --h: 55.75px; --z: 9">
+<p><strong>Manual labels</strong></p>
+</div>
+<div class="caption" style="--x: 494.24px; --y: 566.67px; --w: 150.67px; --h: 55.75px; --z: 10">
+<p><strong>Semantic segmentation</strong></p>
+</div>
+<div class="arrow" style="--x: 632.25px; --y: 340.00px; --w: 60.75px; --h: 62.00px; --z: 11; --fill: rgba(68,114,196,1.0000)">
+</div>
+<footer>26</footer></section>
+<section class="figure" data-slide="15" aria-label="Slide 15"><div class="panel" style="--x: 0px; --y: 0px; --w: 960px; --h: 720px; --z: 1; --fill: rgb(77, 115, 182)">
+</div>
+<div class="box box-title" style="--x: 0px; --y: 12px; --w: 372.65px; --h: 191.72px; --z: 3">
+<h1>Computer Vision and Deep Learning (III)</h1>
+</div>
+<div class="box compact" style="--x: 1.18px; --y: 230.35px; --w: 371.47px; --z: 4">
+<p>Deep learning-based models have been successfully applied to many segmentation and classification problems.</p>
+<p>These techniques face several challenges that hinder their application in the biomedical field:</p>
+<p><strong>Image stacks:</strong><br />
+Current state of the art models work with 2D images<br />
+3D image stacks require complex models</p>
+<p><strong>Scarce datasets:</strong><br />
+Complex problems require complex models.<br />
+Complex models require large datasets for training.</p>
+<p><strong>Weakly labeled datasets:</strong><br />
+Incomplete segmentations.<br />
+For instance, scientists are generally not interested in segmenting the entire image.</p>
+</div>
+<div class="media" style="--x: 389.62px; --y: 0.00px; --w: 570.37px; --h: 720.00px; --z: 5">
+<p><img src="assets/derived/s15-object-05-clipped.png" alt="Picture 2" /></p>
+</div>
+<footer>27</footer></section>
+<section class="figure" data-slide="16" aria-label="Slide 16"><h1>Computer Vision and Deep Learning (IV)</h1>
+<p><img src="assets/images/image36.jpg" alt="Picture 2" /></p>
+<footer>28</footer></section>
+<section class="figure" data-slide="17" aria-label="Slide 17"><h1>Computer Vision and Deep Learning (IV)</h1>
+<div class="command">
+<p>ffmpeg -i media10.avi \<br />
+-map 0:v:0 -map 0:a? \<br />
+-c:v libx264 -crf 18 -preset medium \<br />
+-c:a aac -b:a 192k \<br />
+-movflags +faststart \<br />
+media10.mp4</p>
+</div>
+<p><img src="assets/images/image36.jpg" alt="Picture 2" /></p>
+<div class="callout" style="--x: 351.00px; --y: 159.16px; --w: 269.25px; --h: 138.83px; --z: 4; --fill: rgba(0,0,0,0.5000)">
+<p><strong>Preprocessing</strong></p>
+</div>
+<footer>29</footer></section>
+<section class="figure" data-slide="18" aria-label="Slide 18"><h1>Computer Vision and Deep Learning (IV)</h1>
+<p><img src="assets/images/image36.jpg" alt="Picture 2" /></p>
+<div class="callout" style="--x: 424.50px; --y: 250.69px; --w: 269.25px; --h: 138.83px; --z: 4; --fill: rgba(0,0,0,0.5000)">
+<p><strong>Training the DL model</strong></p>
+</div>
+<div class="callout" style="--x: 292.19px; --y: 389.19px; --w: 147.30px; --h: 139.16px; --z: 5; --fill: rgba(0,0,0,0.5000)">
+<p><strong>DL model</strong></p>
+</div>
+<footer>30</footer></section>
+<section class="figure" data-slide="19" aria-label="Slide 19"><h1>Computer Vision and Deep Learning (IV)</h1>
+<p><img src="assets/images/image36.jpg" alt="Picture 2" /></p>
+<div class="callout" style="--x: 436.50px; --y: 400.69px; --w: 279.16px; --h: 224.30px; --z: 4; --fill: rgba(0,0,0,0.5000)">
+<p><strong>Postprocessing</strong></p>
+</div>
+<footer>31</footer></section>
+<section class="figure" data-slide="20" aria-label="Slide 20"><h1>Computer Vision and Deep Learning (V)</h1>
+<div class="media" style="--x: 97.50px; --y: 187.50px; --w: 813.00px; --h: 345.00px; --z: 3">
+<p><img src="assets/images/image37.jpg" alt="Picture 6" /></p>
+</div>
+<footer>32</footer></section>
+<section class="figure" data-slide="21" aria-label="Slide 21"><h1>EspINA</h1>
+<div class="media" style="--x: 224.69px; --y: 187.30px; --w: 509.15px; --h: 509.15px; --z: 3">
+<p><video controls preload="none" playsinline poster="assets/images/image38.png" src="assets/videos/slide-21-516877989.mp4" aria-label="cl04_32_33_espina_manipulate_facet"></video></p>
+</div>
+</section>
+<section class="text" data-slide="22" aria-label="Slide 22"><h1>My work during these last year</h1>
+</section>
+<section class="text" style="background-image: url(&quot;assets/images/image1.png&quot;)" data-slide="23" aria-label="Slide 23"><h1>MMy</h1>
+</section></main></div>
+<nav id="toolbar" aria-label="Presentation controls">
+<button id="previous" type="button" title="Left arrow">Previous</button>
+<span id="counter" aria-live="polite"></span>
+<button id="next" type="button" title="Right arrow">Next</button>
+<button id="toggle-notes" type="button" title="N">Notes</button>
+<button id="fullscreen" type="button" title="F">Fullscreen</button>
+</nav>
+<aside id="notes" aria-label="Speaker notes"></aside>
+<script>
+'use strict';
+const slides = Array.from(document.querySelectorAll('#stage section'));
+const notes = ["", "", "Historia:\n\nIngenierías Técnicas de Informática de Sistemas y de Gestión (desde el curso 97-98)\n\nEscuela Técnica Superior de Ingeniería Informática, creada en julio del 2007", "Historia:\n\nIngenierías Técnicas de Informática de Sistemas y de Gestión (desde el curso 97-98)\n\nEscuela Técnica Superior de Ingeniería Informática, creada en julio del 2007", "", "Ingenierías Técnicas de Informática de Sistemas y de Gestión (desde el curso 97-98)\n\nEscuela Técnica Superior de Ingeniería Informática, creada en julio del 2007", "XRay:\nEntorno seguro para el entrenamiento técnicos en radiología evitando riesgos de exposición a radiación\nPermite simular el procedimiento completo. Posicionamiento de paciente y configuración de la máquina\nPermite incluir distintos modelos de paciente de forma sencilla.\nColaboración con hospitales de UK y la universidad de Bangor", "Simulated X-Ray Image Enhancing \nLas técnicas de Montecarlo permiten simular de forma precisa cómo los fotones interactúan con los distintos materiales de la escena \nProblema: obtener buenos tiene un coste computacional elevado.\nLa imagen de arriba a la izquierda se ha simulado utilizando 10^9 fotones en unas 70 horas (en un servidor con capacidad para ejecutar 20 hilos en paralelo!), la imagen del centro se simula en menos de un segundo, en un PC de sobremesa. \nProblema: Al simularse de forma determinista solo se tiene en cuenta la energía que absorben los tejidos, no el scatering. \nPretendemos usar DL para añadir efectos de scattering en la imagen final.", "", "MelVin: https://vg-lab.es/melvin/\nEs un Metaframework WEB para el desarrollo de aplicaciones de visualización, especialmente útil en tareas de prototipado rápido y análisis exploratorio interactivo.\nHa sido diseñado para integrar visualizaciones y procesos de análisis de datos, desarrollados con distintas tecnologías, dotándolos de mecanismos de interoperabilidad\nPensado para extenderse y adaptarse a distintas áreas de investigación. \nEl proceso de análisis de datos puede definirse de forma simple mediante diagramas de flujo\nA diferencia de la mayoría de las aplicaciones de minería de datos basadas en diagramas de flujo, MeLVin permite a los usuarios incluir visualizaciones y las interacciones entre estas como parte del proceso de análisis y no sólo como una herramienta para mostrar los resultados finales", "MelVin: https://vg-lab.es/melvin/\nEs un Metaframework WEB para el desarrollo de aplicaciones de visualización, especialmente útil en tareas de prototipado rápido y análisis exploratorio interactivo.\nHa sido diseñado para integrar visualizaciones y procesos de análisis de datos, desarrollados con distintas tecnologías, dotándolos de mecanismos de interoperabilidad\nPensado para extenderse y adaptarse a distintas áreas de investigación. \nEl proceso de análisis de datos puede definirse de forma simple mediante diagramas de flujo\nA diferencia de la mayoría de las aplicaciones de minería de datos basadas en diagramas de flujo, MeLVin permite a los usuarios incluir visualizaciones y las interacciones entre estas como parte del proceso de análisis y no sólo como una herramienta para mostrar los resultados finales", "", "Problemas:\nLos dataset científicos suelen ser escasos y débilmente etiquetados. \nProponemos:\nAlgoritmos automáticos para mejorar la calidad de los datos de entrenamiento\nTécnicas que reducen los problemas de “overfiting” derivados de la mala calidad de los datos, durante el entrenamiento.\nAlgoritmos de corrección que permiten seguir mejorando el GT.", "In the time remaining, \nI would like to present our work \non the segmentation of dendritic spines \ncapture with confocal microscopy.", "As most of you already know, deep learning-based models have been successfully applied to many segmentation and classification problems.  \n \nHowever, \nin this problem, and in this field,\nthese techniques have to face challenges \nthat hinder their application.  \n \nIn this case:  \nWe have to deal with Image Stacks\nCurrent state of the art models mainly work with 2D images \nAdditionally,\n       processing 3D images require complex models\n \n- [Complex problems require complex models with a high number of parameters ]\nAnd complex models require large datasets for training. \n \nSince segmenting dendritic spines  is hard and time-consuming,\nit is difficult to find datasets large enough to train DL models with guarantees.\n\n- Finally, most of the dataset segmentations are incomplete.\nGenerally, users are interested only in one branch of the stack\nand some parts of the image are unsegemtned.", "[Our proposal to address these challenges ]\nOur proposed solution to address these challenges \n\nis based on three components:  \n \n- A data pre-processing module.  \n- A specific DL model adapted to this problem.  \n- And a postprocessing module that allows the user to correct the model’s errors.", "Our proposed solution to address these challenges is based on three components:  \n \n- A data pre-processing module.  \n- A specific DL model adapted to this problem.  \n- And a postprocessing module that allows the user to correct the model’s errors.", "Our proposed solution to address these challenges is based on three components:  \n \n- A data pre-processing module.  \n- A specific DL model \nadapted to this problem.  \n- And a postprocessing module that allows the user to correct the model’s errors.", "Our proposed solution to address these challenges is based on three components:  \n \n- A data pre-processing module.  \n- A specific DL model adapted to this specific problem.  \n- And a postprocessing  module that allows the user to correct the model’s errors.", "The preprocessing module \nprimary goal \nis to create the training set and \n[automatically] reconstruct the necks \nof disconnected spines.", "", "", ""];
+let currentSlide = Math.max(0, Math.min(slides.length - 1, (Number(location.hash.slice(1)) || 1) - 1));
+function fitStage() {
+  const scale = Math.min(window.innerWidth / 960, (window.innerHeight - 48) / 720);
+  document.getElementById('stage').style.transform = `scale(${scale})`;
+}
+function showSlide(index) {
+  currentSlide = Math.max(0, Math.min(slides.length - 1, index));
+  slides.forEach((slide, position) => {
+    if (position !== currentSlide) slide.querySelectorAll('video').forEach(video => video.pause());
+  });
+  slides.forEach((slide, position) => slide.classList.toggle('active', position === currentSlide));
+  document.getElementById('counter').textContent = `${currentSlide + 1} / ${slides.length}`;
+  document.getElementById('notes').textContent = notes[currentSlide] || 'No speaker notes.';
+  document.getElementById('previous').disabled = currentSlide === 0;
+  document.getElementById('next').disabled = currentSlide === slides.length - 1;
+  history.replaceState(null, '', `#${currentSlide + 1}`);
+}
+function toggleNotes() {
+  document.getElementById('notes').classList.toggle('visible');
+}
+async function toggleFullscreen() {
+  try {
+    if (document.fullscreenElement) await document.exitFullscreen();
+    else await document.documentElement.requestFullscreen();
+  } catch (error) { console.warn('Fullscreen is not available.', error); }
+}
+document.getElementById('previous').addEventListener('click', () => showSlide(currentSlide - 1));
+document.getElementById('next').addEventListener('click', () => showSlide(currentSlide + 1));
+document.getElementById('toggle-notes').addEventListener('click', toggleNotes);
+document.getElementById('fullscreen').addEventListener('click', toggleFullscreen);
+window.addEventListener('resize', fitStage);
+window.addEventListener('keydown', event => {
+  if (['ArrowRight', 'ArrowDown', 'PageDown', ' '].includes(event.key)) { event.preventDefault(); showSlide(currentSlide + 1); }
+  else if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(event.key)) { event.preventDefault(); showSlide(currentSlide - 1); }
+  else if (event.key === 'Home') showSlide(0);
+  else if (event.key === 'End') showSlide(slides.length - 1);
+  else if (event.key.toLowerCase() === 'n') toggleNotes();
+  else if (event.key.toLowerCase() === 'f') toggleFullscreen();
+});
+fitStage();
+showSlide(currentSlide);
+</script>
+</body>
+</html>

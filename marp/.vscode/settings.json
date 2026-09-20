@@ -1,0 +1,7 @@
+{
+  "markdown.marp.themes": [
+    "./theme.css"
+  ],
+  "markdown.marp.html": "all",
+  "markdown.marp.exportType": "html"
+}
