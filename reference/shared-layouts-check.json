@@ -1,0 +1,20 @@
+{
+  "slides": 23,
+  "layout_types": [
+    "cover",
+    "figure",
+    "sidebar",
+    "split",
+    "text"
+  ],
+  "visible_text_preserved": true,
+  "speaker_notes_preserved": true,
+  "media_references_preserved": true,
+  "cover_media_moved_to_theme": true,
+  "expected_missing_videos": 5,
+  "render_engine": "Chromium, independent CommonMark preview",
+  "native_marp_tested": false,
+  "visual_changes": "Shared text positions and sidebar media grid normalized.",
+  "all_images_loaded": true,
+  "cover_has_no_html_or_media": true
+}

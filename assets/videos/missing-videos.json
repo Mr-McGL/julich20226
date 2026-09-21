@@ -1,0 +1,97 @@
+[
+  {
+    "slide": 7,
+    "shape_id": 1158545669,
+    "shape_name": "videoplayback",
+    "poster": "assets/images/image18.png",
+    "status": "attached_by_user",
+    "relationships": [
+      {
+        "Id": "rId9",
+        "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/video",
+        "Target": "maskFile.mp4",
+        "TargetMode": "External",
+        "resolved_target": "maskFile.mp4",
+        "exists_in_package": false
+      }
+    ],
+    "replacement_path": "assets/videos/1.mp4",
+    "html_class": "s07-object-06"
+  },
+  {
+    "slide": 11,
+    "shape_id": 2066184930,
+    "shape_name": "SnapSave.io-MeLVin(360p)",
+    "poster": "assets/images/image26.png",
+    "status": "attached_by_user",
+    "relationships": [
+      {
+        "Id": "rId9",
+        "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/video",
+        "Target": "maskFile.mp4",
+        "TargetMode": "External",
+        "resolved_target": "maskFile.mp4",
+        "exists_in_package": false
+      }
+    ],
+    "replacement_path": "assets/videos/2.mp4",
+    "html_class": "s11-object-07"
+  },
+  {
+    "slide": 13,
+    "shape_id": 1419470627,
+    "shape_name": "DSNet2",
+    "poster": "assets/images/image28.png",
+    "status": "attached_by_user",
+    "relationships": [
+      {
+        "Id": "rId7",
+        "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/video",
+        "Target": "maskFile.mp4",
+        "TargetMode": "External",
+        "resolved_target": "maskFile.mp4",
+        "exists_in_package": false
+      }
+    ],
+    "replacement_path": "assets/videos/3.mp4",
+    "html_class": "s13-object-05"
+  },
+  {
+    "slide": 13,
+    "shape_id": 955489805,
+    "shape_name": "DSNet3",
+    "poster": "assets/images/image29.png",
+    "status": "attached_by_user",
+    "relationships": [
+      {
+        "Id": "rId10",
+        "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/video",
+        "Target": "maskFile.mp4",
+        "TargetMode": "External",
+        "resolved_target": "maskFile.mp4",
+        "exists_in_package": false
+      }
+    ],
+    "replacement_path": "assets/videos/4.mp4",
+    "html_class": "s13-object-06"
+  },
+  {
+    "slide": 21,
+    "shape_id": 516877989,
+    "shape_name": "cl04_32_33_espina_manipulate_facet",
+    "poster": "assets/images/image38.png",
+    "status": "attached_by_user",
+    "relationships": [
+      {
+        "Id": "rId6",
+        "Type": "http://schemas.openxmlformats.org/officeDocument/2006/relationships/video",
+        "Target": "maskFile.avi",
+        "TargetMode": "External",
+        "resolved_target": "maskFile.avi",
+        "exists_in_package": false
+      }
+    ],
+    "replacement_path": "assets/videos/5.mp4",
+    "html_class": "s21-object-03"
+  }
+]
