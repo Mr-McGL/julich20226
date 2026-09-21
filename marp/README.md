@@ -88,6 +88,41 @@ La diapositiva 13 tiene dos vídeos; añade `--shape-id` con el identificador de
 
 ## Exportar y comprobar
 
+### PowerPoint con vídeos incrustados
+
+Después de exportar **la versión actual** de `presentacion.md` a
+`presentacion.pptx` con Marp, ejecuta:
+
+```bash
+python scripts/embed_pptx_videos.py
+```
+
+También está disponible en VS Code: **Terminal → Ejecutar tarea → PowerPoint:
+incrustar vídeos tras exportar con Marp**. Genera `presentacion-con-videos.pptx`
+y conserva el PowerPoint original. Los vídeos quedan dentro del archivo:
+no necesitas llevar la carpeta `assets` al ordenador de la presentación.
+En modo presentación, haz clic sobre el vídeo para reproducirlo.
+
+Requiere Python 3.10 o posterior y **FFmpeg** (`ffmpeg` y `ffprobe` en el PATH).
+No necesita paquetes de Python. Lee las rutas relativas de las etiquetas
+`<video src="…">` y las coordenadas de `theme.css` y de los divs `media`.
+Admite los diseños actuales `sidebar`, `split`, `figure` y los divs `media`
+con coordenadas en píxeles, sin recortes ni contenedores anidados. Para los
+vídeos de la cuadrícula conserva las proporciones sobre fondo blanco; en
+los divs conserva el ajuste `fill` del tema. Usa el primer fotograma como
+imagen inicial. Valida que los MP4 utilicen H.264 y, si hay audio, AAC.
+
+Si cambias el Markdown o el tema, **vuelve a exportar con Marp y repite el
+comando**. El script comprueba el número y proporción de las diapositivas,
+pero no puede detectar todos los cambios de contenido en un PPTX antiguo.
+No uses como entrada el archivo que ya contiene los vídeos.
+
+Si tienes Marp CLI instalado (`npm install`), puedes hacer ambos pasos con:
+
+```bash
+npm run pptx
+```
+
 La configuración para Marp CLI está incluida:
 
 ```bash

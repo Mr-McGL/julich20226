@@ -16,7 +16,18 @@ marcos.garcía@urjc.es
 
 
 <!--
+* First, I would like to thank Boris for the opportunity to present my work
+* and to thank Sandra for inviting me to visit the center during the next two months.
 
+<br>
+
+* Although, Our groups have been collaborating over the past few years, 
+
+* I haven't been involved in those collaborations.
+
+
+
+* For this reason, **First**, I wanted to frame my work in the context of my gruop.
 -->
 
 ---
@@ -33,6 +44,16 @@ marcos.garcía@urjc.es
 
 ![Image 4](assets/images/image5.png)
 
+<!--
+
+* I belong to the Rey Juan Carlos University
+
+* In Madrid, there are 6 public universities and URJC is the youngest one.
+
+* However, we are the second largest by number of students.
+
+-->
+
 ---
 
 <!-- _class: split -->
@@ -44,9 +65,10 @@ marcos.garcía@urjc.es
 * Computer Science School
 * Around 200 faculty members
 * 8 bachelor's degree programs
-* 9 double degree programs
+* 9 double bachelor's degree programs
 * 6 master's degree programs
 * 1 PhD program in IT
+
 
 </div>
 
@@ -75,7 +97,11 @@ MÓSTOLES
 </div>
 
 <!--
+* I'm member of the Computer Science School.
 
+* We are 200 faculty members and we offer 8 bachelor's degree programs.
+
+* Which is a lot of lecturing for a school of this size.
 -->
 
 ---
@@ -98,6 +124,12 @@ MÓSTOLES
 
 <!--
 
+* The VG-Lab is my research group.
+
+* VG-Lab stands for Graphics and Visualization Lab.
+
+* We are a fairly small group of only 5 faculty members.
+
 -->
 
 ---
@@ -115,6 +147,21 @@ MÓSTOLES
 
 * **Visualization:** Scientific visualization, information visualization, and exploratory analysis
 * **Machine learning and deep learning**
+
+
+<!--
+
+* En los comienzos del grupo, nos centrabamos en la computación gráfica y de alto rendimiento,
+
+* Actually, never worked on HPC, 
+
+* I was focused on computer graphics and medical simulation
+
+* But since the Blue Brain Project and then the Human Brain Project, we our main focus has shifted to Visualization;
+
+* And in my particular case, to the application of machine learning and deep learning to biomedical field.
+
+-->
 
 ---
 
@@ -147,8 +194,13 @@ MÓSTOLES
 </div>
 
 <!--
-Technical degree programs in Systems and Management Informatics have been offered since the 1997–1998 academic year.
-The School of Computer Engineering was established in July 2007.
+* I didn't have to much time to prepare this presetnation
+* I think is to long, I want to focus on my recent work.
+* Therefore, I'm going to move fast through the next slices.
+
+* I just want to highlight this proyect becouse it was carried out in coopetation whit RWTH Aachen; with proffesor Dr. Torsten Kuhlen,
+
+* In the RASIMAS project we work on a ultrasound guided reginal anesthesia simulator. 
 -->
 
 ---
@@ -170,11 +222,13 @@ The School of Computer Engineering was established in July 2007.
 ![Picture 2](assets/images/image15.png)
 
 <!--
-X-ray simulator:
-This is a safe environment for training radiographers, with no risk of radiation exposure.
-It simulates the full procedure, including patient positioning and machine settings.
-Different patient models can be added easily.
-This work is a collaboration with hospitals in the UK and Bangor University.
+
+* I think I can skip this Projectional Radiography Simulator, 
+* I just mention it becouse it was one of our latest medical simulator.
+<br>
+
+* This simulator allows to train with different patient models;
+and allos to simulate the full procedure in real-time, including patient positioning and machine settings.
 -->
 
 ---
@@ -207,7 +261,8 @@ to mimic high-quality Monte Carlo simulations with a high computational cost
 
 <!--
 Enhancing simulated X-ray images:
-Monte Carlo methods accurately simulate how photons interact with different materials in the scene.
+* Monte Carlo methods accurately simulate how photons interact with different materials in the scene.
+
 However, producing high-quality images takes a lot of computing time.
 The top-left image was simulated using one billion photons. It took about 70 hours on a server running 20 threads in parallel.
 The center image was simulated in less than one second on a desktop PC.
@@ -221,16 +276,12 @@ We aim to use deep learning to add scattering effects to the final image.
 
 # VG-LAB in the Human Brain Project
 
-<!--
-The Human Brain Project, or HBP, was a European research project.
-These were the tasks that VG-LAB contributed to during its different phases.
--->
 
 **Ramp-Up**  
 > T7.3.2 – Neuroscience-specific visualization
 
 **SGA1**  
->T1.4.2 – Visual analysis tools for microanatomical data  
+>T1.4.2 – **Visual analysis tools for microanatomical data  
 >T7.3.2 – Neuroscience-specific visualization
 
 **SGA2**  
@@ -240,6 +291,13 @@ These were the tasks that VG-LAB contributed to during its different phases.
 
 **SGA3**  
 > T5.7 – Visualisation framework (SC3)
+
+<!--
+* Our group was first involved in Blue Brain Project.
+* In this proyect, many of our group members starte a visualization and exploratory analysis research line.
+
+* This research line was consolidated first in the Human Brain Project, and now in EBRAINS 2.0 and the Virtual Brain Twin project.
+-->
 
 ---
 
@@ -273,6 +331,19 @@ Here are our contributions to EBRAINS 2.0 and the Virtual Brain Twin project.
 
 </div>
 
+<!--
+* Probably, most of have seen this slide before.
+
+* It is not my work.
+
+* Muestra la filosofia detras de las herramientas de visualización que se estan desarrollando en EBRAIN.
+
+* Basicamente, la idea es desarrollar herramientas independites que permiten la visulaizción multiescala de datos structurales, topologicos y de actividad del cerebro
+
+* And provide them with communication mechanisms so they can work together.
+
+-->
+
 ---
 
 
@@ -292,6 +363,13 @@ A graphical meta-framework for prototyping data visualization and exploratory an
 
 
 <!--
+* During the HBP, I worked a little bit on visualization, 
+
+* But following the opposite direction,
+
+* I worked in a framework to integrate WEB-based vistualization technoloies and data analysis tools.
+
+
 MeLVin: https://vg-lab.es/melvin/
 MeLVin is a web-based meta-framework for building visualization applications.
 It is especially useful for rapid prototyping and interactive exploratory analysis.
@@ -305,11 +383,6 @@ MeLVin also lets users include visualizations and interactions between them as p
 ---
 
 # VG-LAB in the Human Brain Project
-
-<!--
-The Human Brain Project, or HBP, was a European research project.
-These were the tasks that VG-LAB contributed to during its different phases.
--->
 
 **Ramp-Up**  
 > T7.3.2 – Neuroscience-specific visualization
@@ -325,6 +398,17 @@ These were the tasks that VG-LAB contributed to during its different phases.
 
 **SGA3**  
 >  T5.7 – Visualisation framework (SC3)
+
+<!--
+* During the HBP, I start working with Neuroanatomist from the Cajal Institue.
+
+* They were intered in developing algothims to automate the segmentation of their data.
+
+* And this is how we starte working on Deep Learning.
+
+* In the remaining time that I have, I would like to show my
+first and last work on this line.
+-->
 
 ---
 
@@ -348,6 +432,14 @@ user-supervised correction algorithms
 ![Picture 4](assets/images/image27.png)
 
 <!--
+
+* Our first work was DeepSpineNet, a deep learning toolfor automatic dendritic spine segmentation from Confocal Microscopy images.
+
+* The sismtem works pretty well, but it is not perfect. So we had to develop set of human-supervised correction algorithms.
+
+
+----
+
 Challenges:
 Scientific datasets are often small, and their labels are incomplete or imprecise.
 We propose three approaches:
@@ -362,20 +454,17 @@ We propose three approaches:
 
 # DeepSpineNet
 
-Deep learning models have been successfully applied to many segmentation and classification problems.
-
+**Challenges**:
 Several challenges make these techniques difficult to apply in biomedical research:
 
-**Image stacks:**  
-Many state-of-the-art models work with 2D images.  
+* **Image stacks:**  Many state-of-the-art models work with 2D images.  
 3D image stacks require complex models.
 
-**Limited training data:**  
+* **Limited training data:**  Limited data is available for training.  
 Complex problems require complex models.  
 Complex models require large datasets for training.
 
-**Weakly labeled datasets:**  
-Incomplete segmentations.  
+* **Weakly labeled datasets:** Incomplete segmentations.  
 For instance, scientists are generally not interested in segmenting the entire image.
 
 <!--
@@ -397,7 +486,7 @@ As a result, other parts of the image remain unlabeled.
 ---
 
 <!-- _class: figure -->
-
+ICA Limitations
 # DeepSpineNet
 
 ![problems](assets/images/img1.png)
@@ -515,6 +604,8 @@ Our approach has three components:
 
 <!--
 The main goal of the preprocessing module is to create the training set and automatically reconstruct the necks of disconnected dendritic spines.
+
+This figure shows the model performece with and without the preprocessing module.
 -->
 
 ---
@@ -548,14 +639,33 @@ The main goal of the preprocessing module is to create the training set and auto
 
 
 <!--
-* Esta es mi linea de trabajo mas reciente
-* He estado trabajando en ella el ultimo año.
+* I would like to finish may presetation showing my most recent work.
+* I have been working in this line for the last year and we have somo preliminary results.
+
+<br>
+
+* In this work, we are working with the Experimental and Computational Electrophysiology Group from the Cajal Institue.
+
+* The work whith intracranial EEG recordings. 
+
+* The signals captured by electrodes are known as local field potentials (LFPs).
+
+* Those signals are mixture of the activity of different brain regions.
+
+* They use blind source separation techinique to recover the activity of different brain regions.
+
+* I always wanted to show visully how ICA works, and
+* Yesterday I ask chatGPT for a video. 
+* It was not exactly what I wanted. But I think is good enough.
+
+
+* However, I think I'm going to skip to go directly to our work.
 -->
 
 ---
 
 <!-- _class: figure -->
-
+ 
 # The Cocktail Party Problem
 
 <div class="media" style="--x: 224.69px; --y: 187.30px; --w: 509.15px; --h: 509.15px; --z: 3">
@@ -597,6 +707,16 @@ The main goal of the preprocessing module is to create the training set and auto
 
 <br><br><br><br><br><br><br><br>
 
+
+<!--
+The main limitation that we have to face with ICA is that the source signals cannot be correlated.
+
+Therefore we are forced to remove synchronous activity from our analysis and we can only work with baseline activity;
+
+And just keep basal activity, which is highly complex and apparently random.
+
+-->
+
 ---
 
 
@@ -610,6 +730,35 @@ The main goal of the preprocessing module is to create the training set and auto
 <video controls preload="none" playsinline src="assets/videos/v3.mp4"></video>
 
 </div>
+
+---
+
+<!-- _class: figure -->
+
+# ICA Limitations
+
+![](assets/images/theta2.png)
+
+<!--
+Here we have a picture with the activity types, basal and synchronous. 
+ -->
+
+---
+
+<!-- _class: figure -->
+
+# LFP Generators
+
+![](assets/images/LFPG.png)
+
+<!--
+Thi is what we have after the blind source separation. 
+
+On the top, we have the reconstructed signals, which are the activity of different brain regions.
+
+The bottom row shows how the activity is distributed across the electrodes.
+
+-->
 
 ---
 
@@ -628,16 +777,31 @@ The main goal of the preprocessing module is to create the training set and auto
 
 <br><br><br><br>
 
+<!--
+* Most of the recordings contain baseline activity, which is highly complex and apparently random.
+
+* Our goal is to see if there are patterns in baseline activity that allow us to identify brain regions;
+
+* And whether these patterns are consistent across subjects.
+ -->
+
 ---
 
 # Methodology
 
-* We have worked on training ML models based on handcrafted features and DL models operating on raw signals to determine whether there are patterns in baseline activity that allow us to identify brain regions.
+* We have trained ML models based on handcrafted features and DL models operating on raw signals to determine whether there are patterns in baseline activity that allow us to identify brain regions.
 
 * We compare models with different levels of complexity to determine whether the relationships among handcrafted features that support generator identification can be captured by linear models or require more flexible nonlinear functions.
 
-<br><br><br><br><br><br><
+<br><br><br><br><br><br>
 
+<!--
+* We have trained ML models based on handcrafted features;
+* and DL models operating on raw signals to determine whether there are patterns in baseline activity that allow us to identify brain regions.
+
+* We compare models with different levels of complexity to determine whether the relationships among handcrafted features that support generator identification can be captured by linear models or require more flexible nonlinear functions.
+
+-->
 ---
 
 <!-- _class: results -->
