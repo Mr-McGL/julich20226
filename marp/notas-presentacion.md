@@ -2,343 +2,278 @@
 
 ## 1. Inside VG-LAB: Selected Research Areas
 
-* First, I would like to thank Boris for the opportunity to present my work.
+* First, I would like to thank Boris for the opportunity to present my work  
+* and to thank Sandra for inviting me to visit the center during the next two months.
 
-* I would also like to thank Sandra for inviting me to spend the next two months at the center.
+<br>
 
-* Our groups have been collaborating over the past few years.
+* Although our groups have been collaborating over the past few years,
 
 * I haven't been involved in those collaborations.
 
-* So I would like to start by putting my work in the context of my group.
+
+
+* For this reason, **first**, I wanted to frame my work in the context of my group.
 
 ## 2. URJC – Rey Juan Carlos University
 
-* I work at Rey Juan Carlos University.
+* I belong to the Rey Juan Carlos University
 
-* Madrid has six public universities, and URJC is the youngest.
+* In Madrid, there are 6 public universities and URJC is the youngest one.
 
 * However, we are the second largest by number of students.
 
 ## 3. ETSII
 
-* I'm a member of the School of Computer Science.
+* I'm a member of the Computer Science School.
 
-* We have around 200 faculty members and offer eight bachelor's degree programs.
+* We are 200 faculty members and we offer 8 bachelor's degree programs.
 
-* That is a lot of teaching for a school of this size.
+* Which is a lot of lecturing for a school of this size.
 
 ## 4. VG-LAB
 
-* VG-LAB is my research group.
+* The VG-Lab is my research group.
 
-* VG-LAB stands for Graphics and Visualization Lab.
+* VG-Lab stands for Graphics and Visualization Lab.
 
-* We are a fairly small group, with only five faculty members.
+* We are a fairly small group of only 5 faculty members.
 
 ## 5. VG-LAB
 
 * In the early years, our group focused on computer graphics and high-performance computing.
 
-* I never worked on high-performance computing myself.
+* I never worked on HPC myself.
 
-* I focused on computer graphics and medical simulation.
+* I was focused on computer graphics and medical simulation.
 
-* With the Blue Brain Project and then the Human Brain Project, our main focus shifted to visualization.
+* With the beginning of the Blue Brain Project and then the Human Brain Project,  
+our main focus shifted from computer graphics to visualization;
 
-* In my case, I started applying machine learning and deep learning to biomedical research.
+* And in my particular case, to the application of machine learning and deep learning to the biomedical field.
 
 ## 6. Computer Graphics and Medical Simulation
 
-* I didn't have much time to prepare this presentation.
+* I didn't have too much time to prepare this presentation  
+* I think it is too long; I want to focus on my recent work.  
+* Therefore, I'm going to move fast through the next slides.
 
-* I think it is too long, and I want to focus on my recent work.
+* I just want to highlight this project because it was carried out in cooperation with RWTH Aachen; with Professor Dr. Torsten Kuhlen,
 
-* So I will go through the next few slides quickly.
-
-* I want to highlight this project because we worked with RWTH Aachen and Professor Torsten Kuhlen.
-
-* In the RASIMAS project, we worked on a simulator for ultrasound-guided regional anesthesia.
+* In the RASIMAS project, we worked on an ultrasound-guided regional anesthesia simulator.
 
 ## 7. Computer Graphics and Medical Simulation
 
-* I will go through this radiography simulator quickly.
+* This is our projection radiography simulator.
 
-* I mention it because it was one of our most recent medical simulators.
+* I just mention it because it was one of our latest medical simulators.
 
-* It lets users train with different patient models.
-
-* It simulates the full procedure in real time.
+* It lets the physicians train with different patient models, and  
+* it simulates the full procedure in real time.
 
 * This includes patient positioning and machine settings.
 
 ## 8. Enhancing Simulated X-Ray Images
 
-* Monte Carlo methods accurately simulate how photons interact with different materials.
+Enhancing simulated X-ray images:  
+* Monte Carlo methods accurately simulate how photons interact with different materials in the scene.
 
-* However, producing high-quality images takes a lot of computing time.
-
-* The top-left image was simulated using one billion photons.
-
-* It took about 70 hours on a server running 20 threads in parallel.
-
-* The center image was simulated in less than one second on a desktop PC.
-
-* However, this deterministic simulation only accounts for the energy absorbed by tissues.
-
-* It does not include scattering.
-
-* We aim to use deep learning to add scattering effects to the final image.
+However, producing high-quality images takes a lot of computing time.  
+The top-left image was simulated using one billion photons.  
+It took about 70 hours on a server running 20 threads in parallel.  
+The center image was simulated in less than one second on a desktop PC.  
+However, this deterministic simulation only accounts for the energy absorbed by tissues.  
+It does not include scattering.  
+We aim to use deep learning to add scattering effects to the final image.
 
 ## 9. VG-LAB in the Human Brain Project
 
-* Our group first took part in the Blue Brain Project.
+* Our group was first involved in the Blue Brain Project.  
+* In this project, many of our group members started a visualization and exploratory analysis research line.
 
-* In this project, many group members started working on visualization and exploratory analysis.
-
-* This work continued in the Human Brain Project.
-
-* It now continues in EBRAINS 2.0 and the Virtual Brain Twin project.
+* This research line was consolidated first in the Human Brain Project,  
+and now in EBRAINS 2.0 and the Virtual Brain Twin project.
 
 ## 10. VG-LAB in EBRAINS
 
-* EBRAINS is a European project.
-
-* Here are our contributions to EBRAINS 2.0 and the Virtual Brain Twin project.
+EBRAINS is a European project.  
+Here are our contributions to EBRAINS 2.0 and the Virtual Brain Twin project.
 
 ## 11. Visualization Ecosystem
 
-* Most of you have probably seen this slide before.
+* Probably, most of you have seen this slide before.
 
-* This is not my own work.
+* It is not my work.
 
-* It shows the idea behind the visualization tools being developed in EBRAINS.
+* It shows the philosophy behind the visualization tools being developed in EBRAINS.
 
-* The idea is to develop separate tools to visualize brain data at different scales.
+* Basically, the idea is to develop independent tools that allow us to visualize  
+structural, topological, and activity data from the brain at different scales
 
-* These tools cover brain structure, connections, and activity.
-
-* They also have ways to communicate, so they can work together.
+* And provide them with communication mechanisms so they can work together.
 
 ## 12. MeLVin
 
-* During the Human Brain Project, I also did some work on visualization.
+* During the HBP, I worked a little bit on visualization,
 
-* I took a different approach.
+* But going in the opposite direction,
 
-* I worked on a framework to bring together web-based visualization and data analysis tools.
+* I worked on a framework to integrate web-based visualization technologies and data analysis tools.
 
-* MeLVin is a web-based framework for building visualization applications.
 
-* It is especially useful for rapid prototyping and interactive exploratory analysis.
-
-* It connects visualizations and analysis tools built with different technologies.
-
-* It can be extended and adapted to different research areas.
-
-* Users can define the analysis process with simple flowcharts.
-
-* Most data mining tools based on flowcharts use visualizations only to show the final results.
-
-* MeLVin also includes visualizations and interactions between them in the analysis process.
-
-MeLVin: https://vg-lab.es/melvin/
+MeLVin: https://vg-lab.es/melvin/  
+MeLVin is a web-based meta-framework for building visualization applications.  
+It is especially useful for rapid prototyping and interactive exploratory analysis.  
+It connects visualizations and data analysis tools built with different technologies, so they can work together.  
+It can be extended and adapted to different research areas.  
+Users can define the data analysis process with simple flowcharts.  
+Most flowchart-based data mining tools use visualizations only to show the final results.  
+MeLVin also lets users include visualizations and interactions between them as part of the analysis process.
 
 ## 13. VG-LAB in the Human Brain Project
 
-* During the Human Brain Project, I started working with neuroanatomists from the Cajal Institute.
+* During the HBP, I started working with neuroanatomists from the Cajal Institute.
 
-* They wanted algorithms to automate the segmentation of their data.
+* They were interested in developing algorithms to automate the segmentation of their data.
 
-* This is how we started working on deep learning.
+* And this is how we started working on deep learning.
 
-* In the time I have left, I would like to show our first and most recent work in this area.
+* In the remaining time that I have, I would like to show my  
+first and latest work in this line of research.
 
 ## 14. DeepSpineNet
 
-* Our first project was DeepSpineNet.
+* Our first work was DeepSpineNet, a deep learning tool for automatic dendritic spine segmentation from confocal microscopy images.
 
-* It uses deep learning to automatically segment dendritic spines in confocal microscopy images.
+* The system works pretty well, but it is not perfect.  
+So we had to develop a set of human-supervised correction algorithms.
 
-* The system works quite well, but it is not perfect.
 
-* So we developed a set of correction algorithms guided by the user.
+----
 
-* Scientific datasets are often small, and their labels are incomplete or imprecise.
-
-* We propose three approaches to address these problems.
-
-* First, automatic algorithms to improve the quality of the training data.
-
-* Second, training techniques to reduce overfitting caused by poor-quality data.
-
-* Third, correction algorithms to further improve the reference labels.
+Challenges:  
+Scientific datasets are often small, and their labels are incomplete or imprecise.  
+We propose three approaches:  
+- Automatic algorithms to improve the quality of the training data.  
+- Training techniques to reduce overfitting caused by poor-quality data.  
+- Correction algorithms to further improve the ground-truth labels.
 
 ## 15. DeepSpineNet
 
-* As most of you know, deep learning works well for many segmentation and classification tasks.
+As most of you already know, deep learning models work well for many segmentation and classification tasks.  
+However, applying them to biomedical images can be difficult.
 
-* However, applying it to biomedical images can be difficult.
+First, we work with 3D image stacks.  
+Many state-of-the-art models mainly work with 2D images.  
+Processing 3D images requires more complex models, often with many parameters.
 
-* First, we work with 3D image stacks.
+These models need large training datasets.  
+Labeling dendritic spines is difficult and takes a lot of time.  
+This makes it hard to obtain enough labeled data to train reliable models.
 
-* Many state-of-the-art models mainly work with 2D images.
-
-* Processing 3D images requires more complex models, often with many parameters.
-
-* These models need large training datasets.
-
-* Labeling dendritic spines is difficult and takes a lot of time.
-
-* This makes it hard to get enough labeled data to train reliable models.
-
-* Finally, the labels in many datasets are incomplete.
-
-* Researchers are often interested in only one dendritic branch in the image stack.
-
-* Other parts of the image remain unlabeled.
-
-## 16. DeepSpineNet
-
-* Here are some examples of the segmentation challenges.
-
-* The top row shows the microscopy images.
-
-* The bottom row shows the segmentations.
-
-* The marked areas highlight some of the problems.
+Finally, the labels in many datasets are incomplete.  
+Researchers are often interested in only one dendritic branch in the image stack.  
+As a result, other parts of the image remain unlabeled.
 
 ## 17. DeepSpineNet
 
-* Our approach has three components.
-
-* A preprocessing module to prepare the data.
-
-* A deep learning model designed for this task.
-
-* A postprocessing module that lets users correct the model's errors.
+Our approach has three components:  
+- A preprocessing module to prepare the data.  
+- A deep learning model designed for this task.  
+- A postprocessing module that lets users correct the model's errors.
 
 ## 18. DeepSpineNet
 
-* First, the preprocessing module prepares the data for training.
+Our approach has three components:  
+- A preprocessing module to prepare the data.  
+- A deep learning model designed for this task.  
+- A postprocessing module that lets users correct the model's errors.
 
 ## 19. DeepSpineNet
 
-* Next, we train the deep learning model.
-
-* We then use it to segment the images.
+Our approach has three components:  
+- A preprocessing module to prepare the data.  
+- A deep learning model designed for this task.  
+- A postprocessing module that lets users correct the model's errors.
 
 ## 20. DeepSpineNet
 
-* Finally, the postprocessing module lets users correct the model's errors.
+Our approach has three components:  
+- A preprocessing module to prepare the data.  
+- A deep learning model designed for this task.  
+- A postprocessing module that lets users correct the model's errors.
 
 ## 21. DeepSpineNet
 
-* The preprocessing module creates the training set.
+The main goal of the preprocessing module is to create the training set  
+and automatically reconstruct the necks of disconnected dendritic spines.
 
-* It also automatically reconstructs the necks of disconnected dendritic spines.
-
-* This figure compares the model's performance with and without preprocessing.
-
-## 22. EspINA
-
-* This video shows EspINA.
-
-[Play the video.]
+This figure shows the model's performance with and without the preprocessing module.
 
 ## 23. Analyzing LFPs
 
-* I would like to finish by showing my most recent work.
+* I would like to finish my presentation by showing my most recent work.  
+* I have been working in this line of research for the last year and we have some preliminary results.
 
-* I have been working in this area for the past year, and we have some preliminary results.
+<br>
 
-* We work with the Experimental and Computational Electrophysiology Group from the Cajal Institute.
+* In this work, we are working with the Experimental and Computational Electrophysiology Group from the Cajal Institute.
 
-* They study brain activity using intracranial EEG recordings.
+* They work with intracranial EEG recordings.
 
-* The signals recorded by the electrodes are called local field potentials, or LFPs.
+* The signals captured by electrodes are known as local field potentials (LFPs).
 
-* These signals mix activity from different brain regions.
+* Those signals are a mixture of the activity of different brain regions.
 
-* The group uses blind source separation to recover the activity of each region.
+* They use blind source separation techniques to recover the activity of different brain regions.
 
-* They use a customized version of independent component analysis, or ICA.
+* I have always wanted to show visually how ICA works, and  
+* yesterday I asked ChatGPT for a video.  
+* It was not exactly what I wanted. But I think it is good enough.
 
-* I have always wanted to show visually how ICA works.
 
-* Yesterday, I asked ChatGPT for a video.
-
-* It was not exactly what I wanted, but I think it is good enough.
-
-* However, I think I will skip it and go straight to our work.
-
-## 24. The Cocktail Party Problem
-
-[Play the video if time allows.]
-
-## 25. The Cocktail Party Problem
-
-[Play the video if time allows.]
+* However, I think I'm going to skip it to go directly to our work.
 
 ## 26. ICA Limitations
 
-* ICA has several limitations.
+The main limitation that we have to face with ICA is that the source signals cannot be correlated.
 
-* We need to choose the number of sources.
+Therefore, we are forced to remove synchronous activity from our analysis  
+and we can only work with baseline activity;
 
-* Basic methods cannot recover the original signal amplitudes.
-
-* For us, the main limitation is that the source signals cannot be correlated.
-
-* So we remove synchronous activity from our analysis.
-
-* We only keep baseline activity.
-
-* This activity is highly complex and seems random.
-
-## 27. The Cocktail Party Problem
-
-[Play the video if time allows.]
+And just keep basal activity, which is highly complex and apparently random.
 
 ## 28. ICA Limitations
 
-* This figure shows two types of activity: baseline and synchronous.
+Here we have a picture with the activity types, basal and synchronous.
 
 ## 29. LFP Generators
 
-* This is what we get after blind source separation.
+This is what we have after the blind source separation.
 
-* At the top, we have the reconstructed signals from different brain regions.
+At the top, we have the reconstructed signals, which are the activity of different brain regions.
 
-* The bottom row shows how the activity is distributed across the electrodes.
+The bottom row shows how the activity is distributed across the electrodes.
 
 ## 30. Motivation
 
-* Most of our recordings contain baseline activity.
+* Most of the recordings contain baseline activity, which is highly complex and apparently random.
 
-* This activity is very complex and seems random.
+* Our goal is to see if there are patterns in baseline activity that allow us to identify brain regions;
 
-* We want to find patterns that help us identify brain regions.
+* And whether these patterns are consistent across subjects.
 
-* We also want to see if these patterns are consistent across subjects.
-
-* Models based on handcrafted features are usually easier to interpret.
-
-* We want to know whether deep learning can find patterns that these features miss.
+* We also want to see whether DL methods identify patterns beyond our handcrafted features.
 
 ## 31. Methodology
 
-* We trained two types of models to identify brain regions.
+* We have trained ML models based on handcrafted features;  
+* and DL models operating on raw signals  
+to determine whether there are patterns in baseline activity that allow us to identify brain regions.
 
-* The first uses handcrafted features extracted from the signals.
-
-* The second uses deep learning on the raw signals.
-
-* We also compare simpler and more complex models.
-
-* This helps us see whether linear models are enough to identify the generators.
-
-* Or whether we need more flexible, nonlinear models.
+* We compare models with different levels of complexity  
+to see whether linear models can identify the generators,  
+or whether we need more flexible nonlinear models.
 
 ## 32. Results
 
@@ -356,7 +291,7 @@ MeLVin: https://vg-lab.es/melvin/
 
 * In these cases, the deep learning model made predictions with high confidence.
 
-## 34. Future Work
+## 34. Future lines of work
 
 * We now want to understand which patterns the deep learning models use.
 

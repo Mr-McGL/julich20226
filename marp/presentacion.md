@@ -16,15 +16,17 @@ marcos.garcía@urjc.es
 
 
 <!--
-* First, I would like to thank Boris for the opportunity to present my work.
+* First, I would like to thank Boris for the opportunity to present my work
+* and to thank Sandra for inviting me to (visit|stay at) the center during the next two months.
 
-* I would also like to thank Sandra for inviting me to spend the next two months at the center.
 
-* Our groups have been collaborating over the past few years.
+* Although our groups have been collaborating over the past few years,
 
 * I haven't been involved in those collaborations.
 
-* So I would like to start by putting my work in the context of my group.
+
+
+* For this reason, **first**, I wanted to put my work in the context of my group.
 -->
 
 ---
@@ -42,9 +44,9 @@ marcos.garcía@urjc.es
 ![Image 4](assets/images/image5.png)
 
 <!--
-* I work at Rey Juan Carlos University.
+* I work at  the Rey Juan Carlos University
 
-* Madrid has six public universities, and URJC is the youngest.
+* In Madrid, there are 6 public universities and URJC is the youngest one.
 
 * However, we are the second largest by number of students.
 -->
@@ -57,7 +59,7 @@ marcos.garcía@urjc.es
 
 <div class="box" style="--x: 132.24px; --y: 309px; --w: 367.77px; --h: 268.83px; --z: 4; --fill: white">
 
-* School of Computer Science
+* Computer Science School
 * Around 200 faculty members
 * 8 bachelor's degree programs
 * 9 double bachelor's degree programs
@@ -92,11 +94,11 @@ MÓSTOLES
 </div>
 
 <!--
-* I'm a member of the School of Computer Science.
+* I'm (part of | a member) of the Computer Science School.
 
-* We have around 200 faculty members and offer eight bachelor's degree programs.
+* We are 200 faculty members and
 
-* That is a lot of teaching for a school of this size.
+We offer 8 bachelor's degree programs amogn other Degress
 -->
 
 ---
@@ -118,11 +120,11 @@ MÓSTOLES
 </div>
 
 <!--
-* VG-LAB is my research group.
+* The VG-Lab is my research group.
 
-* VG-LAB stands for Graphics and Visualization Lab.
+* VG-Lab stands for Visualization and Graphics Lab.
 
-* We are a fairly small group, with only five faculty members.
+* We are a fairly small group of only 8 faculty members.
 -->
 
 ---
@@ -143,15 +145,16 @@ MÓSTOLES
 
 
 <!--
-* In the early years, our group focused on computer graphics and high-performance computing.
+* In earlay day, our group focused on computer graphics and high-performance computing.
 
-* I never worked on high-performance computing myself.
+* I never worked on HPC myself.
 
-* I focused on computer graphics and medical simulation.
+* Instead I activaly participate on the computer graphics and medical simulation lines.
 
-* With the Blue Brain Project and then the Human Brain Project, our main focus shifted to visualization.
+* With the beginning of the Blue Brain Project and then the Human Brain Project,
+our main focus shifted from computer graphics to visualization;
 
-* In my case, I started applying machine learning and deep learning to biomedical research.
+* And in my particular case, to the application of machine learning and deep learning to the biomedical field.
 -->
 
 ---
@@ -185,15 +188,13 @@ MÓSTOLES
 </div>
 
 <!--
-* I didn't have much time to prepare this presentation.
+* I didn't have too much time to prepare this presentation
+* I think it is too long; I want to focus on my recent work.
+* Therefore, I'm going to move fast through the next slides.
 
-* I think it is too long, and I want to focus on my recent work.
+* I just want to highlight this project because it was carried out in cooperation with RWTH Aachen; with Professor Dr. Torsten Kuhlen,
 
-* So I will go through the next few slides quickly.
-
-* I want to highlight this project because we worked with RWTH Aachen and Professor Torsten Kuhlen.
-
-* In the RASIMAS project, we worked on a simulator for ultrasound-guided regional anesthesia.
+* In the RASIMAS project, we worked on an ultrasound-guided regional anesthesia simulator.
 -->
 
 ---
@@ -215,13 +216,12 @@ MÓSTOLES
 ![Picture 2](assets/images/image15.png)
 
 <!--
-* I will go through this radiography simulator quickly.
+* This is our projection radiography simulator.
 
-* I mention it because it was one of our most recent medical simulators.
+* I just mention it because it was one of our latest medical simulators.
 
-* It lets users train with different patient models.
-
-* It simulates the full procedure in real time.
+* It lets the physicians train with different patient models, and
+* it simulates the full procedure in real time.
 
 * This includes patient positioning and machine settings.
 -->
@@ -255,21 +255,16 @@ to mimic high-quality Monte Carlo simulations with a high computational cost
 </div>
 
 <!--
-* Monte Carlo methods accurately simulate how photons interact with different materials.
+Enhancing simulated X-ray images:
+* Monte Carlo methods accurately simulate how photons interact with different materials in the scene.
 
-* However, producing high-quality images takes a lot of computing time.
-
-* The top-left image was simulated using one billion photons.
-
-* It took about 70 hours on a server running 20 threads in parallel.
-
-* The center image was simulated in less than one second on a desktop PC.
-
-* However, this deterministic simulation only accounts for the energy absorbed by tissues.
-
-* It does not include scattering.
-
-* We aim to use deep learning to add scattering effects to the final image.
+However, producing high-quality images takes a lot of computing time.
+The top-left image was simulated using one billion photons.
+It took about 70 hours on a server running 20 threads in parallel.
+The center image was simulated in less than one second on a desktop PC.
+However, this deterministic simulation only accounts for the energy absorbed by tissues.
+It does not include scattering.
+We aim to use deep learning to add scattering effects to the final image.
 -->
 
 ---
@@ -295,13 +290,10 @@ to mimic high-quality Monte Carlo simulations with a high computational cost
 > T5.7 – Visualisation framework (SC3)
 
 <!--
-* Our group first took part in the Blue Brain Project.
+* As I mentioned, Our group shtifeted theri focus to visualization and exploratory analisis during the Blue Brain project
 
-* In this project, many group members started working on visualization and exploratory analysis.
-
-* This work continued in the Human Brain Project.
-
-* It now continues in EBRAINS 2.0 and the Virtual Brain Twin project.
+* This research line was consolidated first in the Human Brain Project,
+and now in EBRAINS 2.0 and the Virtual Brain Twin project.
 -->
 
 ---
@@ -310,11 +302,7 @@ to mimic high-quality Monte Carlo simulations with a high computational cost
 
 # VG-LAB in EBRAINS
 
-<!--
-* EBRAINS is a European project.
 
-* Here are our contributions to EBRAINS 2.0 and the Virtual Brain Twin project.
--->
 
 **Virtual Brain Twin Project (HORIZON-HLTH-2023-TOOL-05-03)**  
 > Developing a GUI for integrative workflows
@@ -338,17 +326,16 @@ to mimic high-quality Monte Carlo simulations with a high computational cost
 </div>
 
 <!--
-* Most of you have probably seen this slide before.
+* Probably, most of you have seen this slide before.
 
-* This is not my own work.
+* It is not my work.
 
-* It shows the idea behind the visualization tools being developed in EBRAINS.
+* It shows the philosophy behind the visualization tools being developed in EBRAINS.
 
-* The idea is to develop separate tools to visualize brain data at different scales.
+* The main idea is to develop independent tools that allow us to visualize
+structural, topological, and activity data from the brain at different scales
 
-* These tools cover brain structure, connections, and activity.
-
-* They also have ways to communicate, so they can work together.
+* And provide them with communication mechanisms so they can work together.
 -->
 
 ---
@@ -370,27 +357,21 @@ A graphical meta-framework for prototyping data visualization and exploratory an
 
 
 <!--
-* During the Human Brain Project, I also did some work on visualization.
+* During the HBP, I worked a little bit on visualization,
 
-* I took a different approach.
+* But going in the opposite direction,
 
-* I worked on a framework to bring together web-based visualization and data analysis tools.
+* I worked on a framework to integrate web-based in single visualization technologies and data analysis tools.
 
-* MeLVin is a web-based framework for building visualization applications.
-
-* It is especially useful for rapid prototyping and interactive exploratory analysis.
-
-* It connects visualizations and analysis tools built with different technologies.
-
-* It can be extended and adapted to different research areas.
-
-* Users can define the analysis process with simple flowcharts.
-
-* Most data mining tools based on flowcharts use visualizations only to show the final results.
-
-* MeLVin also includes visualizations and interactions between them in the analysis process.
 
 MeLVin: https://vg-lab.es/melvin/
+MeLVin is a web-based meta-framework for building visualization applications.
+It is especially useful for rapid prototyping and interactive exploratory analysis.
+It connects visualizations and data analysis tools built with different technologies, so they can work together.
+It can be extended and adapted to different research areas.
+Users can define the data analysis process with simple flowcharts.
+Most flowchart-based data mining tools use visualizations only to show the final results.
+MeLVin also lets users include visualizations and interactions between them as part of the analysis process.
 -->
 
 ---
@@ -413,13 +394,14 @@ MeLVin: https://vg-lab.es/melvin/
 >  T5.7 – Visualisation framework (SC3)
 
 <!--
-* During the Human Brain Project, I started working with neuroanatomists from the Cajal Institute.
+* During the HBP, I started working with neuroanatomists from the Cajal Institute.
 
-* They wanted algorithms to automate the segmentation of their data.
+* They were interested in developing algorithms to automate the segmentation of their data.
 
-* This is how we started working on deep learning.
+* And this is how we started working on deep learning.
 
-* In the time I have left, I would like to show our first and most recent work in this area.
+* In the remaining time that I have, I would like to show my
+first and latest work in this line of work.
 -->
 
 ---
@@ -444,23 +426,21 @@ user-supervised correction algorithms
 ![Picture 4](assets/images/image27.png)
 
 <!--
-* Our first project was DeepSpineNet.
+* Our first development was DeepSpineNet, a deep learning tool for automatic dendritic spine segmentation from confocal microscopy images.
 
-* It uses deep learning to automatically segment dendritic spines in confocal microscopy images.
+* The system works pretty well, but it is not perfect.
 
-* The system works quite well, but it is not perfect.
+So we had to develop a set of human-supervised correction algorithms.
 
-* So we developed a set of correction algorithms guided by the user.
 
-* Scientific datasets are often small, and their labels are incomplete or imprecise.
+----
 
-* We propose three approaches to address these problems.
-
-* First, automatic algorithms to improve the quality of the training data.
-
-* Second, training techniques to reduce overfitting caused by poor-quality data.
-
-* Third, correction algorithms to further improve the reference labels.
+Challenges:
+Scientific datasets are often small, and their labels are incomplete or imprecise.
+We propose three approaches:
+- Automatic algorithms to improve the quality of the training data.
+- Training techniques to reduce overfitting caused by poor-quality data.
+- Correction algorithms to further improve the ground-truth labels.
 -->
 
 ---
@@ -483,27 +463,18 @@ Complex models require large datasets for training.
 For instance, scientists are generally not interested in segmenting the entire image.
 
 <!--
-* As most of you know, deep learning works well for many segmentation and classification tasks.
+Deep learning models work well for many segmentation and classification tasks.
+However, applying them to biomedical images is still challeging.
 
-* However, applying it to biomedical images can be difficult.
+First, we work with stacks of images.
+Processing 3D images requires more complex models, often with many parameters.
 
-* First, we work with 3D image stacks.
+These models need large training datasets.
+Labeling dendritic spines is difficult and takes a lot of time.
+This makes it hard to obtain enough labeled data to train reliable models.
 
-* Many state-of-the-art models mainly work with 2D images.
-
-* Processing 3D images requires more complex models, often with many parameters.
-
-* These models need large training datasets.
-
-* Labeling dendritic spines is difficult and takes a lot of time.
-
-* This makes it hard to get enough labeled data to train reliable models.
-
-* Finally, the labels in many datasets are incomplete.
-
-* Researchers are often interested in only one dendritic branch in the image stack.
-
-* Other parts of the image remain unlabeled.
+Finally, the labels in many datasets are incomplete.
+Researchers are often interested in only one dendritic branch in the image stack.
 -->
 ---
 
@@ -512,14 +483,13 @@ For instance, scientists are generally not interested in segmenting the entire i
 
 ![problems](assets/images/img1.png)
 
+
+
+
 <!--
-* Here are some examples of the segmentation challenges.
+In this work, we had an additional problem.
 
-* The top row shows the microscopy images.
-
-* The bottom row shows the segmentations.
-
-* The marked areas highlight some of the problems.
+ The necks of dendritic spines sometimes cannot be recovered.
 -->
 
 ---
@@ -535,13 +505,10 @@ For instance, scientists are generally not interested in segmenting the entire i
 </div>
 
 <!--
-* Our approach has three components.
-
-* A preprocessing module to prepare the data.
-
-* A deep learning model designed for this task.
-
-* A postprocessing module that lets users correct the model's errors.
+Our approach has three components:
+- A preprocessing module to prepare the data.
+- A deep learning model designed for this task.
+- A postprocessing module that lets users correct the model's errors.
 -->
 
 ---
@@ -565,7 +532,10 @@ For instance, scientists are generally not interested in segmenting the entire i
 </div>
 
 <!--
-* First, the preprocessing module prepares the data for training.
+Our approach has three components:
+- A preprocessing module to prepare the data.
+- A deep learning model designed for this task.
+- A postprocessing module that lets users correct the model's errors.
 -->
 
 ---
@@ -592,9 +562,10 @@ For instance, scientists are generally not interested in segmenting the entire i
 </div>
 
 <!--
-* Next, we train the deep learning model.
-
-* We then use it to segment the images.
+Our approach has three components:
+- A preprocessing module to prepare the data.
+- A deep learning model designed for this task.
+- A postprocessing module that lets users correct the model's errors.
 -->
 
 ---
@@ -618,7 +589,10 @@ For instance, scientists are generally not interested in segmenting the entire i
 </div>
 
 <!--
-* Finally, the postprocessing module lets users correct the model's errors.
+Our approach has three components:
+- A preprocessing module to prepare the data.
+- A deep learning model designed for this task.
+- A postprocessing module that lets users correct the model's errors.
 -->
 
 ---
@@ -630,11 +604,9 @@ For instance, scientists are generally not interested in segmenting the entire i
 ![Picture 6](assets/images/image37.jpg)
 
 <!--
-* The preprocessing module creates the training set.
+This figure shows the model's performance with and without the preprocessing module.
 
-* It also automatically reconstructs the necks of disconnected dendritic spines.
-
-* This figure compares the model's performance with and without preprocessing.
+The model learns to connect the spines to the dendritic shaft
 -->
 
 ---
@@ -649,11 +621,7 @@ For instance, scientists are generally not interested in segmenting the entire i
 
 </div>
 
-<!--
-* This video shows EspINA.
 
-[Play the video.]
--->
 
 ---
 
@@ -667,36 +635,35 @@ For instance, scientists are generally not interested in segmenting the entire i
 
 * They study brain activity using intracranial EEG recordings.
 * The signals captured by electrodes are known as local field potentials (LFPs).
-* These signals are a mixture of neuronal activity from different regions.
+* These signals are composed of the sum of neuronal activity from different regions.
 * This group has been working for years on the development of blind source separation techniques to isolate activity from different brain regions.
 * Several methods exist, but they work with a customized version of Independent Component Analysis (ICA).
-* This technique has several limitations.
+* This technique is not free from limitations.
 
 
 <!--
-* I would like to finish by showing my most recent work.
+* I would like to finish my presentation showing my most recent work.
+* I have been working in this line for the last year and we have some preliminary results.
 
-* I have been working in this area for the past year, and we have some preliminary results.
+<br>
 
-* We work with the Experimental and Computational Electrophysiology Group from the Cajal Institute.
+* In this line, we are collaborating with the Experimental and Computational Electrophysiology Group from the Cajal Institute.
 
-* They study brain activity using intracranial EEG recordings.
+* They work with intracranial EEG recordings.
 
-* The signals recorded by the electrodes are called local field potentials, or LFPs.
+* The signals captured by electrodes are known as local field potentials (LFPs).
 
-* These signals mix activity from different brain regions.
+* Those signals are a mixture of the activity of different brain regions.
 
-* The group uses blind source separation to recover the activity of each region.
+* They use blind source separation techniques to recover the activity of different brain regions.
 
-* They use a customized version of independent component analysis, or ICA.
+* Yesterday, as a computer graphics lecturere,  I had an idea to give a graphical intution about how ICA works and their limitations
+I asked ChatGPT do it.
+It is not exactly what I had in mind but it I think its quite good
+However I think spent to much time so far so I’m going to skip it
 
-* I have always wanted to show visually how ICA works.
 
-* Yesterday, I asked ChatGPT for a video.
-
-* It was not exactly what I wanted, but I think it is good enough.
-
-* However, I think I will skip it and go straight to our work.
+* However, I think I'm going to skip it to go directly to our work.
 -->
 
 ---
@@ -711,9 +678,7 @@ For instance, scientists are generally not interested in segmenting the entire i
 
 </div>
 
-<!--
-[Play the video if time allows.]
--->
+
 
 ---
 
@@ -727,9 +692,7 @@ For instance, scientists are generally not interested in segmenting the entire i
 
 </div>
 
-<!--
-[Play the video if time allows.]
--->
+
 
 ---
 
@@ -738,13 +701,13 @@ For instance, scientists are generally not interested in segmenting the entire i
 # ICA Limitations
 
 
-* The results depend on the selected number of sources, N. Several approaches exist to estimate this number.
+* It depends on the number N of sources selected. Several approaches exist to estimate the number of sources.
 <br>
 
 * Basic techniques cannot recover the original signal amplitudes.
 <br>
 
-* Source signals cannot be correlated.
+* Signals cannot be correlated.
 
     * We must remove synchronous activity from our analysis.
     * We can only work with baseline activity.
@@ -753,19 +716,12 @@ For instance, scientists are generally not interested in segmenting the entire i
 
 
 <!--
-* ICA has several limitations.
+The main limitation that we have to face with ICA is that the source signals cannot be correlated.
 
-* We need to choose the number of sources.
+Therefore, we are forced to remove synchronous activity from our analysis
+and we can only work with baseline activity;
 
-* Basic methods cannot recover the original signal amplitudes.
-
-* For us, the main limitation is that the source signals cannot be correlated.
-
-* So we remove synchronous activity from our analysis.
-
-* We only keep baseline activity.
-
-* This activity is highly complex and seems random.
+And just keep basal activity, which is highly complex and apparently random.
 -->
 
 ---
@@ -782,9 +738,7 @@ For instance, scientists are generally not interested in segmenting the entire i
 
 </div>
 
-<!--
-[Play the video if time allows.]
--->
+
 
 ---
 
@@ -795,7 +749,16 @@ For instance, scientists are generally not interested in segmenting the entire i
 ![](assets/images/theta2.png)
 
 <!--
-* This figure shows two types of activity: baseline and synchronous.
+The main limitation that we have to face with ICA is that the source signals cannot be correlated.
+
+Therefore, we are forced to remove synchronous activity from our analysis
+and we can only work with baseline activity;
+
+And just keep basal activity, which is highly complex and apparently random.
+
+xxxxxx
+
+Here we have a picture with the two types of activity, basal and synchronous.
 -->
 
 ---
@@ -807,11 +770,11 @@ For instance, scientists are generally not interested in segmenting the entire i
 ![](assets/images/LFPG.png)
 
 <!--
-* This is what we get after blind source separation.
+This is what we have after the blind source separation. 
 
-* At the top, we have the reconstructed signals from different brain regions.
+At the top, we have the reconstructed signals, which are the activity of different brain regions.
 
-* The bottom row shows how the activity is distributed across the electrodes.
+The bottom row shows how the activity is distributed across the electrodes of the shaft.
 -->
 
 ---
@@ -823,50 +786,47 @@ For instance, scientists are generally not interested in segmenting the entire i
 <br>
 
 **Our objective**:
-* To determine whether we can identify patterns in baseline activity that allow us to distinguish brain regions.
-* To determine whether these patterns are consistent across subjects.
-
+* To determine whether we are able to identify patterns in baseline activity that allow us to distinguish brain regions;
+* And whether these patterns are consistent across different subjects.
 > Methods based on handcrafted features usually offer better interpretability, but they are less powerful than DL models.
 * Our secondary objective is to assess whether DL methods identify patterns beyond the handcrafted features we have extracted.
 
 <br><br><br><br>
 
 <!--
-* Most of our recordings contain baseline activity.
+* Most of the recordings contain baseline activity, which is OK
+* However, this activity is highly complex and apparently random.
 
-* This activity is very complex and seems random.
+* Our goal is to see if there are patterns in baseline activity that allow us to identify brain regions;
 
-* We want to find patterns that help us identify brain regions.
+* And whether these patterns are consistent across subjects.
 
-* We also want to see if these patterns are consistent across subjects.
+XXXXXXX
 
-* Models based on handcrafted features are usually easier to interpret.
+* We also want to know whether DL methods identify patterns beyond our handcrafted features.
 
-* We want to know whether deep learning can find patterns that these features miss.
 -->
 
 ---
 
 # Methodology
 
-* We have trained ML models based on handcrafted features and DL models operating on raw signals to determine whether there are patterns in baseline activity that allow us to identify brain regions.
+* We have trained ML models based on handcrafted features and DL model operating on raw signals;
 
-* We compare models with different levels of complexity to determine whether the relationships among handcrafted features that support generator identification can be captured by linear models or require more flexible nonlinear functions.
+* to determine whether there are patterns in baseline activity that allow us to identify brain regions.
+
+* Aditionally, we compare models with different levels of complexity to determine whether the relationships among handcrafted features that support generator identification can be captured by linear models or require more flexible nonlinear functions.
 
 <br><br><br><br><br><br>
 
 <!--
-* We trained two types of models to identify brain regions.
+* We have trained ML models based on handcrafted features;
+* and DL models operating on raw signals
+to determine whether there are patterns in baseline activity that allow us to identify brain regions.
 
-* The first uses handcrafted features extracted from the signals.
-
-* The second uses deep learning on the raw signals.
-
-* We also compare simpler and more complex models.
-
-* This helps us see whether linear models are enough to identify the generators.
-
-* Or whether we need more flexible, nonlinear models.
+* We compare models with different levels of complexity
+to see whether linear models can identify the generators,
+or whether we need more flexible nonlinear models.
 -->
 ---
 
@@ -881,9 +841,12 @@ For instance, scientists are generally not interested in segmenting the entire i
 ![Picture 2](assets/images/r1.png)
 
 <!--
-* Both types of models can identify brain regions from baseline activity in the test set.
+* What we found is that both types of models can identify brain regions from baseline activity in the test set.
 
-* The deep learning models perform significantly better than the models based on handcrafted features.
+* But the deep learning models perform significantly better than the models based on handcrafted features.
+
+We used mixed-effects models to determine whether the differences in performance were statistically significant.
+
 -->
 
 ---
@@ -894,7 +857,7 @@ For instance, scientists are generally not interested in segmenting the entire i
 
 Does deep learning capture patterns beyond our handcrafted features?
 
-* We first examined the transformer's predictions and output probabilities.
+* We first examined the alignment of the transformer's prediction probabilities.
 * We then focused on cases misclassified by the feature-based models.
 * In these cases, the deep learning model made predictions with high confidence.
 
@@ -903,23 +866,32 @@ Does deep learning capture patterns beyond our handcrafted features?
 <!--
 * Next, we asked whether deep learning finds patterns beyond our handcrafted features.
 
-* We looked at the transformer's predictions and their probabilities.
+* We test the alignment of the transformer's prediction probabilities.
 
 * We focused on cases where the models based on handcrafted features made mistakes.
 
-* In these cases, the deep learning model made predictions with high confidence.
+* In these cases, We show that the deep learning model made predictions with high confidence.
 -->
 
 ---
-# Future Work
+# Future lines of work
 * In recent years, significant effort has been devoted to the study of DL interpretability:
     * Explainable AI (XAI)
     * Mechanistic interpretability
-  > This may be easier with images and text, but it is worth trying.
+  > This is certainly easier with images and text, but it is worth trying.
+
 * Once we have shown that baseline activity contains patterns that allow us to identify brain regions, we want to determine whether we can distinguish healthy regions from regions with pathological activity.
   > In the context of epilepsy, seizures are sometimes provoked to identify regions. Being able to detect a region with pathological activity using baseline activity would be a major advance.
 
 <!--
+
+Possible applications of our work.
+
+Now that we have evidence that baseline activity contains patterns that allow us to identify brain regions, we want to determine whether we can distinguish healthy regions from regions with pathological activity in the baseline activity.
+
+
+xxxxxxxxx
+
 * We now want to understand which patterns the deep learning models use.
 
 * We plan to explore explainable AI and mechanistic interpretability.
