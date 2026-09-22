@@ -1,0 +1,76 @@
+# Coordinates are in metres. Rows of A are microphones; columns are speakers.
+# The numeric model is instantaneous: A[i,j] = reference_distance / distance[i,j].
+language: en
+seed: 8
+physics:
+  reference_distance: 1.0
+  minimum_distance: 0.10
+signals:
+  duration: 12.0
+  samples: 2400
+  frequencies: [1.4166666666666667, 2.4166666666666665, 3.5833333333333335]
+  phases: [0.0, 0.8, 1.6]
+  amplitudes: [1.0, 0.9, 0.8]
+style:
+  background: '#000000'
+  foreground: '#F2F4F8'
+  muted: '#929DAF'
+  grid: '#25303F'
+  source_colors: ['#44DBF5', '#FFAE66', '#C39AFF', '#80E3A7', '#F68EAC', '#E7DD75']
+  microphone_color: '#DCE4EF'
+  pca_color: '#F2F4F8'
+  combined_color: '#A2ACBB'
+  residual_color: '#EFCB69'
+render:
+  preset: preview
+  fade_seconds: 0.45
+  bitrate: 3500
+  camera_elevation: 24
+  camera_azimuth: -62
+  max_points: 750
+  presets:
+    draft: {width: 640, height: 360, fps: 10}
+    preview: {width: 1280, height: 720, fps: 20}
+    full: {width: 1920, height: 1080, fps: 30}
+scenes:
+  '1':
+    duration: 32.0
+    speakers:
+      - {id: S1, position: [-3.6, 1.6]}
+      - {id: S2, position: [3.2, 1.7]}
+      - {id: S3, position: [3.2, -1.7]}
+    microphones:
+      - {id: M1, position: [-2.9, 1.1]}
+      - {id: M2, position: [1.1, 1.2]}
+      - {id: M3, position: [1.2, -1.2]}
+  '2':
+    duration: 66.0
+    third_axis: time
+    alternate_bursts: 6
+    correlation_limit: 0.03
+    speakers:
+      - {id: S1, position: [-3.0, 1.2]}
+      - {id: S2, position: [3.0, -1.2]}
+    microphones:
+      - {id: M1, position: [-1.7, -0.6]}
+      - {id: M2, position: [1.8, 0.7]}
+  '3':
+    duration: 34.0
+    components: 2
+    amplitudes: [5.0, 1.0, 1.0]
+    speakers:
+      - {id: S1, position: [-3.6, 1.6]}
+      - {id: S2, position: [3.2, 1.7]}
+      - {id: S3, position: [3.2, -1.7]}
+    microphones:
+      - {id: M1, position: [-2.9, 1.1]}
+      - {id: M2, position: [1.1, 1.2]}
+      - {id: M3, position: [1.2, -1.2]}
+  '4':
+    duration: 24.0
+    speakers:
+      - {id: S1, position: [-3.0, 1.2]}
+      - {id: S2, position: [3.0, -1.2]}
+    microphones:
+      - {id: M1, position: [-1.7, -0.6]}
+      - {id: M2, position: [1.8, 0.7]}

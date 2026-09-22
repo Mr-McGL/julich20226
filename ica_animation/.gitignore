@@ -1,0 +1,17 @@
+# Python caches and package artifacts
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+build/
+.venv/
+
+# Generated exports and interrupted render temporary directories
+output/
+ica-render-*/
+
+# Generated examples
+/examples/
+
+# Generated checksum inventory of the original distribution
+/manifest.sha256.json

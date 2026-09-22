@@ -1,0 +1,9 @@
+# This variant resolves the alternative reading of animation 2: x1, x2, x3.
+extends: default.yml
+scenes:
+  '2':
+    third_axis: microphone_3
+    microphones:
+      - {id: M1, position: [-1.7, -0.6]}
+      - {id: M2, position: [1.8, 0.7]}
+      - {id: M3, position: [0.0, 2.0]}
